@@ -6,17 +6,20 @@ function Header() {
     <div>
       {/* Header Top */}
       <div className="header">
+        {/* Logo */}
         <div className="logo">
-          <img src="" alt="Education Outreach" />
+          <img src="/Images/IITI_logo.png" alt="Education Outreach" />
           <span>Education Outreach</span>
         </div>
         <div className="icons">
-          <div className="nav-item sep">Home</div>
-          <div className="nav-item sep">IIT Indore</div>
+            {/*Navbar buttons */}
+          <div className="nav-item sep"><a href="#">Home</a></div>
+          <div className="nav-item sep"><a href="#">IIT Indore</a></div>
+          <div className="nav-item sep"><a href="#">Reach Us</a></div>
           <div className="search-bar">
             <input type="text" placeholder="Search" />
             <button type="submit">
-              <img src="" alt="Search" />
+              <img src="/Images/SearchButton.png" alt="Search" />
             </button>
           </div>
         </div>
@@ -24,12 +27,20 @@ function Header() {
 
       {/* Navigation Menu */}
       <div className="navMenu">
-        <div className="nav-item sep">About</div>
-        <div className="nav-item sep">Programs</div>
-        <div className="nav-item sep">Cooperation & Engagements</div>
-        <div className="nav-item sep">Academics & Research</div>
-        <div className="nav-item sep">News & Events</div>
-        <div className="nav-item">Reach Us</div>
+        <div className="nav-item sep dropdown">
+            About
+            <div className="dropdown-content">
+                <a href="#" className="sub">Educational Outreach</a>
+                <a href="#" className="sub">Our People</a>
+                <a href="#" className="sub">IIT Indore</a>
+                <a href="#" className="" style={{fontWeight: 300}}>Campus Life</a>
+            </div>
+        </div>
+        <div className="nav-item sep"><a href="">Programs</a></div>
+        <div className="nav-item sep"><a href="">Cooperation & Engagements</a></div>
+        <div className="nav-item sep"><a href="">Academics & Research</a></div>
+        <div className="nav-item "><a href="">News & Events</a></div>
+        
       </div>
     </div>
   );
