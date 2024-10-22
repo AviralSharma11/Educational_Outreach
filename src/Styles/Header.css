@@ -1,0 +1,84 @@
+/* General header layout */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 40px;
+    margin-right: 10px;
+  }
+  
+  .logo span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .icons {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin: 0 15px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  .search-bar button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .search-bar img {
+    height: 16px;
+  }
+  
+  /* Navigation Menu */
+  .navMenu {
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 30px;
+  }
+  
+  .navMenu .nav-item {
+    font-size: 16px;
+    color: #555;
+    cursor: pointer;
+  }
+  
+  .navMenu .nav-item:hover {
+    color: #000;
+    font-weight: bold;
+  }
+
+  .sep{
+    padding-right: 10px;
+    border-right: 1px solid #555 ;
+  }
