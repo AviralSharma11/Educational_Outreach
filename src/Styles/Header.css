@@ -1,3 +1,10 @@
+.Navbar{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
 /* General header layout */
 .header {
     display: flex;
