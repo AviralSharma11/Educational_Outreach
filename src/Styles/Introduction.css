@@ -1,0 +1,7 @@
+.intro{
+    width: 100vw;
+    height: 50vh;
+    z-index: -1;
+    position: relative;
+    top: 140px;
+}

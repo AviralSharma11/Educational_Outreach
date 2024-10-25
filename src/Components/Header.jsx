@@ -9,14 +9,21 @@ function Header() {
         <div className="header">
             {/* Logo */}
             <div className="logo">
-            <img src="/Images/IITI_logo.png" alt="Education Outreach" />
-            <span>Education Outreach</span>
+            <img src="/Images/logo.png" alt="Education Outreach" />
+            {/* <span>Education Outreach</span> */}
             </div>
             <div className="icons">
             {/*Navbar buttons */}
-            <div className="nav-item sep"><a href="#">Home</a></div>
-            <div className="nav-item sep"><a href="#">IIT Indore</a></div>
-            <div className="nav-item sep"><a href="#">Reach Us</a></div>
+            <div className="nav-item sep"><a href="/">Home</a></div>
+            <div className="nav-item sep"><a href="/iit-indore">IIT Indore</a></div>
+            <div className="nav-item sep">
+              <a href="#reach-out" onClick={(e) => {
+                e.preventDefault(); 
+                document.getElementById("reach-out").scrollIntoView({ behavior: "smooth" });
+                }}>
+                  Reach Us
+              </a>
+            </div>
             <div className="search-bar">
                 <input type="text" placeholder="Search" />
                 <button type="submit">
@@ -33,8 +40,8 @@ function Header() {
                 <div className="dropdown-content">
                     <a href="#" className="sub">Educational Outreach</a>
                     <a href="#" className="sub">Our People</a>
-                    <a href="#" className="sub">IIT Indore</a>
-                    <a href="#" className="" style={{fontWeight: 300}}>Campus Life</a>
+                    <a href="/iit-indore" className="sub">IIT Indore</a>
+                    <a href="#" className="" style={{fontWeight: 500}}>Campus Life</a>
                 </div>
             </div>
             <div className="nav-item sep"><a href="">Programs</a></div>

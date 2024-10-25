@@ -1,16 +1,16 @@
-import './App.css';
-import Footer from './Components/Footer';
-import Header from './Components/Header';
-import Heroes from './Components/Heroes';
-import ReachOut from './Components/ReachOut';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import Home from './Components/Home';
+import IITI from './Components/IITI';
 
 function App() {
   return (
     <div className="App">
-        <Header/>
-        <Heroes/>
-        <Footer/>
-        <ReachOut/>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/iit-indore" element={<IITI />} /> 
+        </Routes>
+      </Router>    
     </div>
   );
 }

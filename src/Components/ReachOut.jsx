@@ -3,7 +3,7 @@ import "../Styles/ReachOut.css";
 
 function ReachOut(){
     return(
-        <div>
+        <div id ="reach-out">
             <div className="footer">
                 <div className="footer-container">
                     {/* Logo and Reach Out Section */}
@@ -39,7 +39,7 @@ function ReachOut(){
                     <div className="footer-section social-media">
                         <h3>SOCIAL MEDIA</h3>
                         <div className="social-icons">
-                        <a href="#"><img src="/Images/LinkedIN.png" alt="LinkedIn" /></a>
+                        <a href="https://www.linkedin.com/company/101453191/admin/feed/posts/"><img src="/Images/LinkedIN.png" alt="LinkedIn" /></a>
                         </div>
                     </div>
                 </div>
