@@ -3,6 +3,7 @@
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 1000;
 }
 
 /* General header layout */
@@ -21,7 +22,7 @@
   }
   
   .logo img {
-    height: 40px;
+    height: 80px;
     margin-right: 10px;
   }
   
@@ -109,7 +110,7 @@
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #93e4ff;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
@@ -119,10 +120,11 @@
     color: black;
     padding: 12px 16px;
     text-decoration: none;
+    font-weight: 500;
     display: block;
   }
   
-  .dropdown-content a:hover {background-color: #ddd;}
+  .dropdown-content a:hover {background-color: #27c9ff;}
   
   .dropdown:hover .dropdown-content {display: block;}
 

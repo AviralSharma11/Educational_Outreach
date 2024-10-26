@@ -1,0 +1,34 @@
+.content{
+    position: relative;
+    top: 110px;
+    margin: 40px;
+    padding-top: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+.content h1{
+    color:  #27c9ff;
+    font-weight: 500;
+}
+
+.content p{
+    color: #333;
+    font-size: 16px;
+}
+
+.hostel{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 30px;
+}
+
+.hostel img{
+    height: 35vh;
+    width: 25vw;
+}
+
+.footer{
+    position: relative;
+    top: 50px;
+}
