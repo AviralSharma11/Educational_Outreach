@@ -44,7 +44,14 @@ function Header() {
                     <a href="#" className="" style={{fontWeight: 500}}>Campus Life</a>
                 </div>
             </div>
-            <div className="nav-item sep"><a href="">Programs</a></div>
+            <div className="nav-item sep">
+                <a href="#Program" onClick={(e) => {
+                  e.preventDefault(); 
+                  document.getElementById("Program").scrollIntoView({ behavior: "smooth" });
+                }}>
+                    Programs
+                </a>
+            </div>
             <div className="nav-item sep"><a href="">Cooperation & Engagements</a></div>
             <div className="nav-item sep"><a href="">Academics & Research</a></div>
             <div className="nav-item "><a href="">News & Events</a></div>
