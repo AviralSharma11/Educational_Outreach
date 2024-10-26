@@ -52,7 +52,7 @@ function Header() {
                     Programs
                 </a>
             </div>
-            <div className="nav-item sep"><a href="">Cooperation & Engagements</a></div>
+            <div className="nav-item sep"><a href="/Cooperation_&_Engagements">Cooperation & Engagements</a></div>
             <div className="nav-item sep"><a href="">Academics & Research</a></div>
             <div className="nav-item "><a href="">News & Events</a></div>
             
