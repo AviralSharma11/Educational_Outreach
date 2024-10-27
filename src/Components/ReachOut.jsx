@@ -28,10 +28,10 @@ function ReachOut(){
                     <div className="footer-section quick-links">
                         <h3>QUICK LINKS</h3>
                         <ul>
-                        <li><a href="#">Academic</a></li>
-                        <li><a href="#">Research</a></li>
-                        <li><a href="#">Library</a></li>
-                        <li><a href="#">Campus Facilities</a></li>
+                        <li><a href="https://academic.iiti.ac.in/">Academic</a></li>
+                        <li><a href="https://rnd.iiti.ac.in/">Research</a></li>
+                        <li><a href="https://www.iiti.ac.in/departments">Departments</a></li>
+                        <li><a href="https://www.iiti.ac.in/page/campus-facilities">Campus Facilities</a></li>
                         </ul>
                     </div>
             
