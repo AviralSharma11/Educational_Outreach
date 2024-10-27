@@ -4,6 +4,8 @@ import Header from './Header';
 import Heroes from './Heroes';
 import ReachOut from './ReachOut';
 import Program from "./Program";
+import Devendra_sir_message from './Devendra_sir_message'
+import Director_message from './Director_message'
 import News$Events from "./News&Events";
 import OurPeople from "./OurPeople";
 import MoU from "./MoU";
@@ -14,7 +16,8 @@ function Home(){
         <div>
           <Header/>
           <Heroes/>
-          {/* Director's mssg */}
+          <Director_message />
+          <Devendra_sir_message />
           <OurPeople/>
           <Program />
           <MoU data={mou} />

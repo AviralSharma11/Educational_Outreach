@@ -1,0 +1,129 @@
+.main {
+      display: flex;
+      background-color: grey;
+      padding: 0;
+      margin: 0;
+      height: auto;
+      box-sizing: border-box;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+    .image img {
+      height: 100%;
+      width: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+      max-height: 100vh;
+      object-fit: contain;
+    }
+    .txt {
+      margin-left: 10vh;
+      margin-bottom: 2%;
+      margin-top: 2%;
+      padding: 10px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      color: white;
+      box-sizing: border-box;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .main-container {
+        display: flex;
+        background-color: #e6e7e8;
+        padding: 0;
+        margin: 0;
+        height: auto;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
+      
+      .image-container {
+        flex-shrink: 0;
+      }
+      
+      .image {
+        height: 100%;
+        width: auto;
+        display: block;
+        margin: 0;
+        padding: 0;
+        max-height: 100vh;
+        object-fit: contain;
+      }
+      
+      .text-container {
+        padding: 10px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        color: white;
+        box-sizing: border-box;
+        overflow-y: auto;
+        flex: 1;
+      }
+      
+      .heading {
+        color: black;
+        font-size: 2em;
+        font-weight: bold;
+        margin: 0 10vh 10px 10vh;
+      }
+      
+      .paragraph {
+        color: #787276;
+        font-size: 1em;
+        margin: 0 10vh 20px 10vh;
+      }
+      
+      .prof-name {
+        color: black;
+        font-weight: bold;
+        margin: 0 10vh 5px 10vh;
+      }
+      
+      .prof-title {
+        color: black;
+        font-style: italic;
+        margin: 0 10vh 0 10vh;
+      }
+      
+      .vision-container {
+        background-color: #c5eefa;
+        padding: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: left;
+        font-size: 1.75rem;
+      }
+      
+      .vision-heading {
+        margin-bottom: 1rem;
+      }
+      
+      .vision-text {
+        width: 65%;
+      }
+      
+    @media (max-width: 1024px) {
+      .main {
+        flex-direction: column;
+        align-items: center;
+      }
+      .txt {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+      .txt > div {
+        margin: 0 5vw;
+      }
+      .vision-text {
+              font-size: 1rem;
+      }
+    }
