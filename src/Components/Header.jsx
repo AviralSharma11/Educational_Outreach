@@ -39,7 +39,12 @@ function Header() {
                 About
                 <div className="dropdown-content">
                     <a href="#" className="sub">Educational Outreach</a>
-                    <a href="#" className="sub">Our People</a>
+                    <a href="#People" className="sub" onClick={(e) => {
+                      e.preventDefault(); 
+                      document.getElementById("People").scrollIntoView({ behavior: "smooth" });
+                      }}>
+                        Our People
+                    </a>
                     <a href="/iit-indore" className="sub">IIT Indore</a>
                     <a href="#" className="" style={{fontWeight: 500}}>Campus Life</a>
                 </div>
@@ -52,9 +57,23 @@ function Header() {
                     Programs
                 </a>
             </div>
-            <div className="nav-item sep"><a href="">Cooperation & Engagements</a></div>
+            <div className="nav-item sep">
+                <a href="#MOU" onClick={(e) => {
+                  e.preventDefault(); 
+                  document.getElementById("MOU").scrollIntoView({ behavior: "smooth" });
+                  }}>
+                    Cooperation & Engagements
+                </a>
+            </div>
             <div className="nav-item sep"><a href="">Academics & Research</a></div>
-            <div className="nav-item "><a href="">News & Events</a></div>
+            <div className="nav-item ">
+              <a href="#News" onClick={(e) => {
+                  e.preventDefault(); 
+                  document.getElementById("News").scrollIntoView({ behavior: "smooth" });
+                }}>
+                News & Events
+              </a>
+            </div>
             
         </div>
       </div>

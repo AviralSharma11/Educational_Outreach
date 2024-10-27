@@ -1,0 +1,39 @@
+#MOU{
+    margin: 20px 60px;
+    scroll-margin-top: 150px;
+}
+
+.heading{
+    color:  #27c9ff;
+    font-weight: 400;
+    justify-self: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+/* Table */
+.table-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.mou-table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+}
+
+.mou-table th,
+.mou-table td {
+    padding: 8px;
+    border: 1px solid #000;
+    text-align: left;
+}
+
+.mou-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.mou-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
