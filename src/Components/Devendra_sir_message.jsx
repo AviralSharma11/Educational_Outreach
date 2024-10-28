@@ -6,7 +6,7 @@ export default function Devandra_sir_message() {
     <div className="container">
       <div className="row box">
         <div className="column-left">
-          <img className="img-fluid" src="/Images/devendra_sir copy.jpg" alt="Prof. Devendra Deshmukh" />
+          <img className="img-fluid" src="/Images/devendra_sir.jpg" alt="Prof. Devendra Deshmukh" />
         </div>
         <div className="column-right">
           <h3 className="font-weight-darker head">Communities are our priority!</h3>
