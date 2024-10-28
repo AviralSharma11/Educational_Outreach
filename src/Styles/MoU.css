@@ -37,7 +37,6 @@
     background-color: #f9f9f9;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
     #MOU {
         margin: 20px 10px;
