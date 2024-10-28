@@ -39,7 +39,7 @@ function ReachOut(){
                     <div className="footer-section social-media">
                         <h3>SOCIAL MEDIA</h3>
                         <div className="social-icons">
-                        <a href="https://www.linkedin.com/company/101453191/admin/feed/posts/"><img src="/Images/LinkedIN.png" alt="LinkedIn" /></a>
+                            <a href="https://www.linkedin.com/company/101453191/admin/feed/posts/"><img src="/Images/LinkedIN.png" alt="LinkedIn" /></a>
                         </div>
                     </div>
                 </div>

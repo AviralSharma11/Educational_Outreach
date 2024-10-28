@@ -53,3 +53,41 @@
     font-weight: 500;
     line-height: 1.2;
 }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .people {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 20px;
+    }
+
+    .people-card {
+        width: 180px; /* Slightly smaller card width for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .people {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        gap: 15px;
+    }
+
+    .people-card {
+        width: 90%; /* Full width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 20px; /* Smaller font for the heading on mobile */
+    }
+
+    .people-card {
+        width: 100%; /* Full width for very small screens */
+        padding: 8px;
+    }
+
+    .people-card-detail {
+        font-size: 12px; /* Smaller font inside the card */
+    }
+}

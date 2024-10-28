@@ -1,34 +1,126 @@
-.content{
-    position: relative;
-    top: 110px;
-    margin: 40px;
-    padding-top: 20px;
-    font-family:Georgia, 'Times New Roman', Times, serif
+.intro {
+    width: 100vw;
+    height: 400px; 
+    overflow: hidden;
+    margin-top: 125px;
 }
 
-.content h1{
-    color:  #27c9ff;
+.intro img {
+    width: 100%;
+    height: auto; 
+}
+
+.content {
+    margin: 5vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.content h1 {
+    color: #27c9ff;
     font-weight: 500;
+    font-size: 2rem;
 }
 
-.content p{
+.content p {
     color: #333;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
-.hostel{
+.hostel {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    padding: 30px;
+    gap: 2vw;
+    padding: 5vw;
+    flex-wrap: wrap;
 }
 
-.hostel img{
+.hostel img {
     height: 35vh;
-    width: 25vw;
+    width: 30vw;
+    object-fit: cover;
 }
 
-.footer{
+.footer {
     position: relative;
     top: 50px;
+}
+
+/* Tablet Landscape (Max Width 992px) */
+@media (max-width: 992px) {
+    .intro {
+        margin-top: 10px;
+        height: 45vh;
+    }
+
+    .content {
+        margin: 4vw;
+    }
+
+    .content p {
+        font-size: 0.95rem;
+    }
+
+    .hostel img {
+        height: 30vh;
+        width: 40vw;
+    }
+}
+
+/* Tablet Portrait (Max Width 768px) */
+@media (max-width: 768px) {
+    .intro {
+        margin-top: 10px;
+        height: 40vh;
+    }
+
+    .content {
+        margin: 3vw;
+    }
+
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
+
+    .hostel {
+        gap: 3vw;
+        padding: 3vw;
+    }
+
+    .hostel img {
+        height: 25vh;
+        width: 65vw;
+    }
+}
+
+/* Mobile (Max Width 480px) */
+@media (max-width: 480px) {
+    .intro {
+        margin-top: 20px;
+        height: 35vh;
+    }
+
+    .content {
+        margin: 2vw;
+    }
+
+    .content h1 {
+        font-size: 1.6rem;
+    }
+
+    .content p {
+        font-size: 0.85rem;
+    }
+
+    .hostel img {
+        height: 22vh;
+        width: 90vw;
+    }
+
+    .footer {
+        top: 20px;
+    }
 }

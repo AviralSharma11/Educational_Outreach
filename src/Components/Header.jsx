@@ -1,7 +1,12 @@
-import React from "react";
+import {React, useState} from "react";
 import "../Styles/Header.css";
 
 function Header() {
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!isMenuOpen);
+  };
   return (
     <div>
       {/* Header Top */}
@@ -9,32 +14,39 @@ function Header() {
         <div className="header">
             {/* Logo */}
             <div className="logo">
-            <img src="/Images/logo.png" alt="Education Outreach" />
-            {/* <span>Education Outreach</span> */}
+              <img src="/Images/logo.png" alt="Education Outreach" />
             </div>
-            <div className="icons">
+            
+            {/* Hamburger Icon for Mobile */}
+            <button className="hamburger" onClick={toggleMenu}>
+              <span className="hamburger-bar"></span>
+              <span className="hamburger-bar"></span>
+              <span className="hamburger-bar"></span>
+            </button>
+
+            <div className={`icons ${isMenuOpen ? "open" : ""}`}>
             {/*Navbar buttons */}
-            <div className="nav-item sep"><a href="/">Home</a></div>
-            <div className="nav-item sep"><a href="/iit-indore">IIT Indore</a></div>
-            <div className="nav-item sep">
-              <a href="#reach-out" onClick={(e) => {
-                e.preventDefault(); 
-                document.getElementById("reach-out").scrollIntoView({ behavior: "smooth" });
-                }}>
-                  Reach Us
-              </a>
-            </div>
-            <div className="search-bar">
-                <input type="text" placeholder="Search" />
-                <button type="submit">
-                <img src="/Images/SearchButton.png" alt="Search" />
-                </button>
-            </div>
+              <div className="nav-item sep"><a href="/">Home</a></div>
+              <div className="nav-item sep"><a href="/iit-indore">IIT Indore</a></div>
+              <div className="nav-item sep">
+                <a href="#reach-out" onClick={(e) => {
+                  e.preventDefault(); 
+                  document.getElementById("reach-out").scrollIntoView({ behavior: "smooth" });
+                  }}>
+                    Reach Us
+                </a>
+              </div>
+              <div className="search-bar">
+                  <input type="text" placeholder="Search" />
+                  <button type="submit">
+                  <img src="/Images/SearchButton.png" alt="Search" />
+                  </button>
+              </div>
             </div>
         </div>
 
         {/* Navigation Menu */}
-        <div className="navMenu">
+        <div className={`navMenu ${isMenuOpen ? "open" : ""}`}>
             <div className="nav-item sep dropdown">
                 About
                 <div className="dropdown-content">

@@ -1,14 +1,15 @@
 import React from "react";
 import "../Styles/IITI.css";
 import Header from "./Header";
-import Introduction from "./Introduction";
 import ReachOut from "./ReachOut";
 
 function IITI(){
     return(
         <div>
             <Header />
-            <Introduction/>
+            <div className="intro">
+                <img src="/Images/IITI_intro.jpg" alt="" />
+            </div>
             <div className="content">
                 <h1>IIT Indore</h1>
                 <p> Indian Institute of Technology Indore (IIT Indore or IITI) is one of the premier engineering and technology
