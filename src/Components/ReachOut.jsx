@@ -57,9 +57,13 @@ function ReachOut({ searchQuery }) {
                     <div className="footer-section social-media">
                         <h3>{highlightText("SOCIAL MEDIA")}</h3>
                         <div className="social-icons">
+<<<<<<< HEAD
                             <a href="https://www.linkedin.com/company/101453191/admin/feed/posts/">
                                 <img src="/Images/LinkedIN.png" alt="LinkedIn" />
                             </a>
+=======
+                            <a href="https://www.linkedin.com/company/101453191/admin/feed/posts/"><img src="/Images/LinkedIN.png" alt="LinkedIn" /></a>
+>>>>>>> 47db7ae6012d7fb5283cb7c481603677395246de
                         </div>
                     </div>
                 </div>

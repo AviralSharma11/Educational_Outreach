@@ -53,3 +53,47 @@
     font-weight: 500;
     line-height: 1.2;
 }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .news {
+        grid-template-columns: repeat(3, 1fr); /* 3 columns for large tablets */
+    }
+}
+
+@media (max-width: 992px) {
+    .news {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+        gap: 20px;
+    }
+
+    .news-card {
+        width: 180px; /* Slightly smaller card width for tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .news {
+        grid-template-columns: 1fr; /* 1 column for mobile */
+        gap: 15px;
+    }
+
+    .news-card {
+        width: 90%; /* Full width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 20px; /* Smaller font for the heading on mobile */
+    }
+
+    .news-card {
+        width: 100%; /* Full width for very small screens */
+        padding: 8px;
+    }
+
+    .news-card-detail {
+        font-size: 12px; /* Smaller font inside the card */
+    }
+}

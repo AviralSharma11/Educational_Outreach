@@ -36,3 +36,23 @@
 .mou-table tr:nth-child(even) {
     background-color: #f9f9f9;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #MOU {
+        margin: 20px 10px;
+    }
+    
+    .mou-table {
+        font-size: 14px;
+    }
+
+    .mou-table th,
+    .mou-table td {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    
+}

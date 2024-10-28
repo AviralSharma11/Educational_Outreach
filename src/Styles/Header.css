@@ -133,3 +133,116 @@
     font-weight: 300;
     border-bottom: 0.5px dotted #555;
   }
+
+  /* Responsive Design */
+
+/* For medium screens (tablets) */
+@media (max-width: 992px) {
+  .header {
+      padding: 10px;
+  }
+
+  .logo img {
+      height: 60px; /* Smaller logo */
+  }
+
+  .nav-item {
+      font-size: 14px; /* Smaller font */
+      margin: 0 10px;
+  }
+
+  .search-bar input {
+      width: 100px; /* Narrower search bar */
+  }
+
+  .navMenu {
+      padding: 10px 15px;
+      flex-wrap: wrap; /* Allow wrapping for navigation items */
+  }
+}
+
+/* Hamburger Icon Styling */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    z-index: 2000;
+}
+
+.hamburger-bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 4px 0;
+}
+
+/* Show Hamburger Icon */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+   
+    .icons, .navMenu {
+        display: none;
+    }
+
+    /* Hamburger Menu */
+    .navMenu.open {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #f5f5f5;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        border-top: 1px solid #ccc;
+        padding: 10px 0;
+        z-index: 1500;
+    }
+
+    .navMenu.open a:hover {background-color: #555;}
+
+    /* Adjust navigation item styling for mobile */
+    .icons .nav-item, .navMenu .nav-item {
+        padding: 10px 20px;
+        border: none;
+    }
+
+    .dropdown-content {
+        position: relative;
+        width: 100%;
+    }
+
+    .dropdown-content a {
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .search-bar {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+}
+
+/* Extra small screens (480px and below) */
+@media (max-width: 480px) {
+    .logo img {
+        height: 50px;
+    }
+
+    .search-bar input {
+        width: 85%;
+    }
+
+    .header {
+        padding: 5px 10px;
+    }
+}
