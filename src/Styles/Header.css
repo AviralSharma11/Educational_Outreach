@@ -135,29 +135,27 @@
   }
 
   /* Responsive Design */
-
-/* For medium screens (tablets) */
 @media (max-width: 992px) {
   .header {
       padding: 10px;
   }
 
   .logo img {
-      height: 60px; /* Smaller logo */
+      height: 60px;
   }
 
   .nav-item {
-      font-size: 14px; /* Smaller font */
+      font-size: 14px; 
       margin: 0 10px;
   }
 
   .search-bar input {
-      width: 100px; /* Narrower search bar */
+      width: 100px; 
   }
 
   .navMenu {
       padding: 10px 15px;
-      flex-wrap: wrap; /* Allow wrapping for navigation items */
+      flex-wrap: wrap; 
   }
 }
 
@@ -206,7 +204,6 @@
 
     .navMenu.open a:hover {background-color: #555;}
 
-    /* Adjust navigation item styling for mobile */
     .icons .nav-item, .navMenu .nav-item {
         padding: 10px 20px;
         border: none;
@@ -232,7 +229,6 @@
     }
 }
 
-/* Extra small screens (480px and below) */
 @media (max-width: 480px) {
     .logo img {
         height: 50px;

@@ -1,9 +1,162 @@
 #video {
-    width: 100vw; 
-    height: 60vh;
-    object-fit: cover;
-    position: relative;
-    margin-top: 115px;
-    z-index: -1;
+  width: 100%;
+  height: 100vh; 
+  object-fit: cover;
+  position: relative;
+  z-index: 1; 
+}
+
+.heroes {
+  position: relative;
+  margin-top: 60px;
+}
+
+.achievement-banner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+
+.achievement img {
+  width: 60px;
+  height: auto;
+}
+
+.rankBanner{
+  display: flex;
+}
+
+.motto {
+  margin-top: 15px;
+  justify-self: center;
+}
+
+.motto p {
+  font-size: 24px;
+}
+
+.translation {
+  font-size: 14px;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+.rank-icon p{
+  font-size: 64px;
+}
+
+.rank-icon {
+  width: 40vw; 
+  height: 150px; 
+  background-image: url('../../public/Images/Wheat.png'); 
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: white; 
+}
+
+
+.achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+  .rank-icon p {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 20px;
+  }
+
+  .motto p {
+    font-size: 20px;
+  }
+
+  .translation {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .rankBanner{
+    flex-direction: column;
   }
   
+  .rank-icon {
+    width: 50vw;
+    max-width: 100px;
+    height: 120px;
+  }
+
+  .rank-icon p {
+    font-size: 36px;
+  }
+
+  .achievement-banner {
+    top: 55%;  
+  }
+
+  .description {
+    font-size: 18px;
+  }
+
+  .motto p {
+    font-size: 18px;
+  }
+
+  .translation {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .rank-icon {
+    width: 60vw;
+    max-width: 80px;
+    height: 100px;
+  }
+
+  .rank-icon p {
+    font-size: 28px;
+  }
+
+  .achievement-banner {
+    padding: 0 10px; 
+    top: 60%;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .motto p {
+    font-size: 16px;
+  }
+
+  .translation {
+    font-size: 10px;
+  }
+}

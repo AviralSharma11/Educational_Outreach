@@ -13,28 +13,32 @@ export default function Program(){
                     detail = {programDetails[0].content}
                 />
                 <ProgramCard 
-                    img = {programDetails[0].imgURL}
-                    detail = {programDetails[0].content}
+                    img = {programDetails[1].imgURL}
+                    detail = {programDetails[1].content}
                 />
                 <ProgramCard 
-                    img = {programDetails[0].imgURL}
-                    detail = {programDetails[0].content}
+                    img = {programDetails[2].imgURL}
+                    detail = {programDetails[2].content}
                 />
                 <ProgramCard 
-                    img = {programDetails[0].imgURL}
-                    detail = {programDetails[0].content}
+                    img = {programDetails[3].imgURL}
+                    detail = {programDetails[3].content}
                 />
                 <ProgramCard 
-                    img = {programDetails[0].imgURL}
-                    detail = {programDetails[0].content}
+                    img = {programDetails[4].imgURL}
+                    detail = {programDetails[4].content}
                 />
                 <ProgramCard 
-                    img = {programDetails[0].imgURL}
-                    detail = {programDetails[0].content}
+                    img = {programDetails[5].imgURL}
+                    detail = {programDetails[5].content}
                 />
                 <ProgramCard 
-                    img = {programDetails[0].imgURL}
-                    detail = {programDetails[0].content}
+                    img = {programDetails[6].imgURL}
+                    detail = {programDetails[6].content}
+                />
+                <ProgramCard 
+                    img = {programDetails[7].imgURL}
+                    detail = {programDetails[7].content}
                 />
             </div>
         </div>
