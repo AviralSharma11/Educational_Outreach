@@ -1,52 +1,48 @@
-import React from "react";
+import React, { useEffect, useRef} from "react";
 import "../Styles/IITI.css";
-import Header from "./Header";
-import ReachOut from "./ReachOut";
 
-function IITI(){
-    return(
-        <div>
-            <Header />
+function IITI({ searchQuery }) {
+    const contentRef = useRef(null);
+
+    useEffect(() => {
+        if (searchQuery && contentRef.current) {
+            const textNodes = contentRef.current.querySelectorAll("h1, p");
+            for (const node of textNodes) {
+                if (node.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
+                    node.scrollIntoView({ behavior: "smooth", block: "center" });
+                    break; // Stop at the first match
+                }
+            }
+        }
+    }, [searchQuery]);
+
+    const highlightText = (text) => {
+        if (!searchQuery) return text;
+        const regex = new RegExp(`(${searchQuery})`, "gi");
+        const parts = text.split(regex);
+        return parts.map((part, index) => (
+            regex.test(part) ? <span key={index} className="highlight">{part}</span> : part
+        ));
+    };
+
+    return (
+        <div ref={contentRef}>
             <div className="intro">
                 <img src="/Images/IITI_intro.jpg" alt="" />
             </div>
             <div className="content">
-                <h1>IIT Indore</h1>
-                <p> Indian Institute of Technology Indore (IIT Indore or IITI) is one of the premier engineering and technology
-                    institutes in India. Established in 2009, it is one of the eight new Indian Institutes of Technology (IITs)
-                    established by the Ministry of Education, Government of India.
-                </p> 
-                <p>   
-                    IIT Indore offers undergraduate, graduate, and doctoral programs in engineering and technology. Some
-                    of the popular programs include Computer Science and Engineering, Electrical Engineering, Mechanical
-                    Engineering, and Chemical Engineering.
-                </p>
-                <p>    
-                    The campus of IIT Indore is located in the city of Indore, in the state of Madhya Pradesh, India. It is spread
-                    over an area of around 501.42 acres and is equipped with state-of-the-art infrastructure and facilities, including
-                    well-equipped labs, libraries, and sports facilities.
-                </p>
-                <p>
-                    IIT Indore is known for its strong research focus and has various research centers such as Center for Energy
-                    and Environment, Center for Robotics and Intelligent Systems, Center for VLSI and Embedded Systems and
-                    Center for Nano Science and Technology.
-                </p>
-                <p>    
-                    The institute is also actively involved in various outreach activities and community service programs. It has
-                    established a strong network of industry collaborations and partnerships, which provides students with
-                    opportunities for internships, projects, and placements.
-                    Overall, IIT Indore is a premier institution for engineering and technology education in India, providing
-                    students with a strong foundation in the field and equipping them with the skills and knowledge needed for a
-                    successful career.
-                </p>
-            
+                <h1>{highlightText("IIT Indore")}</h1>
+                <p>{highlightText("Indian Institute of Technology Indore (IIT Indore or IITI) is one of the premier engineering and technology institutes in India. Established in 2009, it is one of the eight new Indian Institutes of Technology (IITs) established by the Ministry of Education, Government of India.")}</p>
+                <p>{highlightText("IIT Indore offers undergraduate, graduate, and doctoral programs in engineering and technology. Some of the popular programs include Computer Science and Engineering, Electrical Engineering, Mechanical Engineering, and Chemical Engineering.")}</p>
+                <p>{highlightText("The campus of IIT Indore is located in the city of Indore, in the state of Madhya Pradesh, India. It is spread over an area of around 501.42 acres and is equipped with state-of-the-art infrastructure and facilities, including well-equipped labs, libraries, and sports facilities.")}</p>
+                <p>{highlightText("IIT Indore is known for its strong research focus and has various research centers such as Center for Energy and Environment, Center for Robotics and Intelligent Systems, Center for VLSI and Embedded Systems and Center for Nano Science and Technology.")}</p>
+                <p>{highlightText("The institute is also actively involved in various outreach activities and community service programs. It has established a strong network of industry collaborations and partnerships, which provides students with opportunities for internships, projects, and placements. Overall, IIT Indore is a premier institution for engineering and technology education in India, providing students with a strong foundation in the field and equipping them with the skills and knowledge needed for a successful career.")}</p>
                 <div className="hostel">
-                    <img src="/Images/DA.jpg"/>
-                    <img src="/Images/Hostel_Room.jpg" />
-                    <img src="/Images/HJB.jpg"/>
+                    <img src="/Images/DA.jpg" alt="Hostel" />
+                    <img src="/Images/Hostel_Room.jpg" alt="Hostel Room" />
+                    <img src="/Images/HJB.jpg" alt="HJB" />
                 </div>
             </div>
-                <ReachOut className="footer"/>
         </div>
     );
 }

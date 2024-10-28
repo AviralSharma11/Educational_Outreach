@@ -35,7 +35,7 @@ export default function Devandra_sir_message({ searchQuery }) {
                 <div className="column-right">
                     <h3 className="font-weight-darker head">{highlightText("Communities are our priority!")}</h3>
                     <p className="text-muted">
-                        {highlightText("Aximintia dolupta quatis essiminienit faciam dis utam rest fugitatis solor moditas mo blaborrum apicab illa simolorrunda vendigendus alit vendaerro ium quidendis doluptaerume dolore ium Otatibus andaecte nima nobit la eum dit aut voloraecti dipisin cuptatinum identiates et moluptat")}
+                        {highlightText(" Suryansh Aximintia dolupta quatis essiminienit faciam dis utam rest fugitatis solor moditas mo blaborrum apicab illa simolorrunda vendigendus alit vendaerro ium quidendis doluptaerume dolore ium Otatibus andaecte nima nobit la eum dit aut voloraecti dipisin cuptatinum identiates et moluptat")}
                     </p>
                     <p className="my-1 font-weight-darker text-body">
                         {highlightText("Prof. Devendra Deshmukh")} <br /> IIT Indore
