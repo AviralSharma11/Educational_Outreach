@@ -77,7 +77,7 @@ function Header() {
                     Cooperation & Engagements
                 </a>
             </div>
-            <div className="nav-item sep"><a href="">Academics & Research</a></div>
+            <div className="nav-item sep"><a href="https://academic.iiti.ac.in/">Academics & Research</a></div>
             <div className="nav-item ">
               <a href="#News" onClick={(e) => {
                   e.preventDefault(); 

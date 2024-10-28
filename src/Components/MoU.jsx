@@ -22,7 +22,7 @@ function MoU({ data }) {
                                 <td>{index + 1}</td>
                                 <td>{item.nature}</td>
                                 <td>{item.title}</td>
-                                <td>{item.signedOn}</td>
+                                <td>{item.signed}</td>
                                 <td>{item.duration}</td>
                             </tr>
                         ))}

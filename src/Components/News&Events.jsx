@@ -13,24 +13,16 @@ export default function News$Events(){
                     detail = {events[0].content}
                 />
                 <EventCards 
-                    img = {events[0].imgURL}
-                    detail = {events[0].content}
+                    img = {events[1].imgURL}
+                    detail = {events[1].content}
                 />
                 <EventCards 
-                    img = {events[0].imgURL}
-                    detail = {events[0].content}
+                    img = {events[2].imgURL}
+                    detail = {events[2].content}
                 />
                 <EventCards 
-                    img = {events[0].imgURL}
-                    detail = {events[0].content}
-                />
-                <EventCards 
-                    img = {events[0].imgURL}
-                    detail = {events[0].content}
-                />
-                <EventCards 
-                    img = {events[0].imgURL}
-                    detail = {events[0].content}
+                    img = {events[3].imgURL}
+                    detail = {events[3].content}
                 />
             </div>
         </div>
