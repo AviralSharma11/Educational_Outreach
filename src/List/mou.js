@@ -41,6 +41,6 @@ const mou = [
         signed:"28/08/2023",
         duration:"5 Years",
     },
-];
+  ];
 
-export default mou;
+  export default mou;

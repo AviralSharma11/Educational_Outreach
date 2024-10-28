@@ -13,7 +13,7 @@ function App() {
 
           <Route path="/iit-indore" element={<IITI />} /> 
 
-          <Route path="/Cooperation_&_Engagements" element={<Engagements_and_Cooperations />} />
+          {/* <Route path="/Cooperation_&_Engagements" element={<Engagements_and_Cooperations />} /> */}
         </Routes>
       </Router>    
     </div>
