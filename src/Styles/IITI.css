@@ -5,10 +5,10 @@
     margin-top: 125px;
 }
 
-.intro img {
+/* .intro img {
     width: 100%;
     height: auto; 
-}
+} */
 
 .content {
     margin: 5vw;
@@ -48,8 +48,8 @@
 /* Tablet Landscape (Max Width 992px) */
 @media (max-width: 992px) {
     .intro {
-        margin-top: 10px;
-        height: 45vh;
+        margin-top: 100px;
+        height: 100%;
     }
 
     .content {
@@ -69,8 +69,8 @@
 /* Tablet Portrait (Max Width 768px) */
 @media (max-width: 768px) {
     .intro {
-        margin-top: 10px;
-        height: 40vh;
+        margin-top: 80px;
+        height: 100%;
     }
 
     .content {
@@ -99,8 +99,8 @@
 /* Mobile (Max Width 480px) */
 @media (max-width: 480px) {
     .intro {
-        margin-top: 20px;
-        height: 35vh;
+        margin-top: 60px;
+        height: 100%;
     }
 
     .content {

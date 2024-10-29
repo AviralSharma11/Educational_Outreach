@@ -56,7 +56,7 @@ function MoU({ data, searchQuery }) {
                                 <td>{index + 1}</td>
                                 <td>{highlightText(item.nature)}</td>
                                 <td>{highlightText(item.title)}</td>
-                                <td>{highlightText(item.signedOn)}</td>
+                                <td>{highlightText(item.signed)}</td>
                                 <td>{highlightText(item.duration)}</td>
                             </tr>
                         ))}

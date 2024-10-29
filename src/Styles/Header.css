@@ -128,6 +128,10 @@
   
   .dropdown:hover .dropdown-content {display: block;}
 
+  .hidden{
+    display: none;
+  }
+
 /* DropMenu details */
   .sub{
     font-weight: 300;
@@ -183,7 +187,14 @@
         display: flex;
     }
 
-   
+   .hidden{
+    display: flex;
+   }
+
+   .seperate{
+    border-top: 1px solid #555 ;
+   }
+
     .icons, .navMenu {
         display: none;
     }
@@ -202,11 +213,17 @@
         z-index: 1500;
     }
 
-    .navMenu.open a:hover {background-color: #555;}
-
     .icons .nav-item, .navMenu .nav-item {
         padding: 10px 20px;
         border: none;
+        text-align: left;
+    }
+
+    .navMenu.open .nav-item:hover, 
+    .navMenu.open a:hover {
+        background-color: #ddd; 
+        color: #000; 
+        font-weight: bold; 
     }
 
     .dropdown-content {
