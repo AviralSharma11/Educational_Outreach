@@ -1,5 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../Styles/Heroes.css";
+
+function Achievement({ targetValue, description }) {
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    let startValue = 0;
+    const duration = 1000; 
+    const stepTime = Math.abs(Math.floor(duration / targetValue));
+
+    const counter = setInterval(() => {
+      startValue += 1;
+      setCount(startValue);
+
+      if (startValue === targetValue) {
+        clearInterval(counter);
+      }
+    }, stepTime);
+
+    return () => clearInterval(counter); 
+  }, [targetValue]);
+
+  return (
+    <div className="achievement">
+      <div className="rank-icon">
+        <p>#{count}</p>
+      </div>
+      <p className="description">{description}</p>
+    </div>
+  );
+}
 
 function Heroes() {
   return (
@@ -12,21 +42,8 @@ function Heroes() {
       </video>
       <div className="achievement-banner">
         <div className="rankBanner">
-          <div className="achievement">
-            <div className="rank-icon">
-              <p>#16</p>
-            </div>
-            <p className="description">
-              Engineering Institute in India NIRF 2024
-            </p>
-          </div>
-
-          <div className="achievement">
-            <div className="rank-icon">
-              <p>#33</p>
-            </div>
-            <p className="description">Overall Institute in India NIRF 2024</p>
-          </div>
+        <Achievement targetValue={16} description="Engineering Institute in India NIRF 2024" />
+        <Achievement targetValue={33} description="Overall Institute in India NIRF 2024" />
         </div>
         <div className="motto">
           <p>वसुधैव कुटुम्बकम्</p>

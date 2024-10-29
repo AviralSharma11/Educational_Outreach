@@ -34,9 +34,7 @@ function IITI({ searchQuery, onMatchFound }) {
     };
     return (
         <div ref={contentRef}>
-            <div className="intro">
-                <img src="/Images/IITI_intro.jpg" alt="" />
-            </div>
+                <img src="/Images/IITI_intro.jpg" className="intro" alt="" />
             <div className="content">
                 <h1>{highlightText("IIT Indore")}</h1>
                 <p>{highlightText("Indian Institute of Technology Indore (IIT Indore or IITI) is one of the premier engineering and technology institutes in India. Established in 2009, it is one of the eight new Indian Institutes of Technology (IITs) established by the Ministry of Education, Government of India.")}</p>
@@ -45,9 +43,9 @@ function IITI({ searchQuery, onMatchFound }) {
                 <p>{highlightText("IIT Indore is known for its strong research focus and has various research centers such as Center for Energy and Environment, Center for Robotics and Intelligent Systems, Center for VLSI and Embedded Systems and Center for Nano Science and Technology.")}</p>
                 <p>{highlightText("The institute is also actively involved in various outreach activities and community service programs. It has established a strong network of industry collaborations and partnerships, which provides students with opportunities for internships, projects, and placements. Overall, IIT Indore is a premier institution for engineering and technology education in India, providing students with a strong foundation in the field and equipping them with the skills and knowledge needed for a successful career.")}</p>
                 <div className="hostel">
-                    <img src="/Images/DA.jpg" alt="Hostel" />
+                    <img src="/Images/Hostel.png" alt="Hostel" />
                     <img src="/Images/Hostel_Room.jpg" alt="Hostel Room" />
-                    <img src="/Images/HJB.jpg" alt="HJB" />
+                    <img src="/Images/Hostel2.jpg" alt="HJB" />
                 </div>
             </div>
         </div>

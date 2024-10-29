@@ -1,7 +1,3 @@
-/* 
-* {
-    box-sizing: border-box;
-} */
 .container {
     padding: 1rem;
     margin: 1.5rem 0;
@@ -87,4 +83,53 @@ body {
     padding: 0;
     overflow-x: hidden;
     overflow-y: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .column-left {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    .column-right {
+        padding: 1rem;
+    }
+
+    .font-weight-darker {
+        font-size: 1.2rem;
+    }
+
+    .text-body {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .font-weight-darker {
+        font-size: 1rem;
+    }
+
+    .head {
+        font-size: 1rem;
+    }
+
+    .text-muted {
+        font-size: 0.85rem;
+    }
+
+    .text-body {
+        font-size: 0.85rem;
+    }
+
+    .img-fluid {
+        width: 50%; 
+    }
 }
