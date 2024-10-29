@@ -1,30 +1,37 @@
 import React, { useEffect, useRef} from "react";
 import "../Styles/IITI.css";
 
-function IITI({ searchQuery }) {
+function IITI({ searchQuery, onMatchFound }) {
     const contentRef = useRef(null);
 
     useEffect(() => {
-        if (searchQuery && contentRef.current) {
-            const textNodes = contentRef.current.querySelectorAll("h1, p");
-            for (const node of textNodes) {
-                if (node.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
-                    node.scrollIntoView({ behavior: "smooth", block: "center" });
-                    break; // Stop at the first match
+        if (searchQuery) {
+            if (contentRef.current) {
+                const firstHighlighted = contentRef.current.querySelector(".highlight");
+                if (firstHighlighted) {
+                    firstHighlighted.scrollIntoView({ behavior: "smooth", block: "center" });
+                    onMatchFound(true); 
+                } else {
+                    onMatchFound(false); 
                 }
             }
+        } else {
+            onMatchFound(true); 
         }
-    }, [searchQuery]);
+    }, [searchQuery, onMatchFound]);
 
     const highlightText = (text) => {
-        if (!searchQuery) return text;
+        if (!searchQuery) return <span>{text}</span>;
         const regex = new RegExp(`(${searchQuery})`, "gi");
         const parts = text.split(regex);
-        return parts.map((part, index) => (
-            regex.test(part) ? <span key={index} className="highlight">{part}</span> : part
-        ));
+        return parts.map((part, index) =>
+            regex.test(part) ? (
+                <span key={index} className="highlight">{part}</span>
+            ) : (
+                <span key={index}>{part}</span>
+            )
+        );
     };
-
     return (
         <div ref={contentRef}>
             <div className="intro">

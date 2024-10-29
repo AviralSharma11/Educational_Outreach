@@ -1,29 +1,36 @@
 import React, { useEffect, useRef } from "react";
 import '../Styles/Message.css';
 
-export default function Devandra_sir_message({ searchQuery }) {
+export default function Devandra_sir_message({ searchQuery, onMatchFound }) {
     const Ref = useRef(null);
 
     useEffect(() => {
-        if (searchQuery && Ref.current) {
-            // Search through all text nodes within the component
-            const textNodes = Ref.current.querySelectorAll("h3, p");
-            for (const node of textNodes) {
-                if (node.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
-                    node.scrollIntoView({ behavior: "smooth", block: "center" });
-                    break; // Stop at the first match
+        if (searchQuery) {
+            if (Ref.current) {
+                const firstHighlighted = Ref.current.querySelector(".highlight");
+                if (firstHighlighted) {
+                    firstHighlighted.scrollIntoView({ behavior: "smooth", block: "center" });
+                    onMatchFound(true); 
+                } else {
+                    onMatchFound(false); 
                 }
             }
+        } else {
+            onMatchFound(true); 
         }
-    }, [searchQuery]);
+    }, [searchQuery, onMatchFound]);
 
     const highlightText = (text) => {
-        if (!searchQuery) return text;
-        const regex = new RegExp(`(${searchQuery})`, "gi");
+        if (!searchQuery) return <span>{text}</span>;
+        const regex = new RegExp(`(${searchQuery})`, "gi"); 
         const parts = text.split(regex);
-        return parts.map((part, index) => (
-            regex.test(part) ? <span key={index} className="highlight">{part}</span> : part
-        ));
+        return parts.map((part, index) =>
+            regex.test(part) ? (
+                <span key={index} className="highlight">{part}</span>
+            ) : (
+                <span key={index}>{part}</span>
+            )
+        );
     };
 
     return (
@@ -35,7 +42,7 @@ export default function Devandra_sir_message({ searchQuery }) {
                 <div className="column-right">
                     <h3 className="font-weight-darker head">{highlightText("Communities are our priority!")}</h3>
                     <p className="text-muted">
-                        {highlightText(" Suryansh Aximintia dolupta quatis essiminienit faciam dis utam rest fugitatis solor moditas mo blaborrum apicab illa simolorrunda vendigendus alit vendaerro ium quidendis doluptaerume dolore ium Otatibus andaecte nima nobit la eum dit aut voloraecti dipisin cuptatinum identiates et moluptat")}
+                        {highlightText("Suryansh Aximintia dolupta quatis essiminienit faciam dis utam rest fugitatis solor moditas mo blaborrum apicab illa simolorrunda vendigendus alit vendaerro ium quidendis doluptaerume dolore ium Otatibus andaecte nima nobit la eum dit aut voloraecti dipisin cuptatinum identiates et moluptat")}
                     </p>
                     <p className="my-1 font-weight-darker text-body">
                         {highlightText("Prof. Devendra Deshmukh")} <br /> IIT Indore
@@ -45,4 +52,3 @@ export default function Devandra_sir_message({ searchQuery }) {
         </div>
     );
 }
-

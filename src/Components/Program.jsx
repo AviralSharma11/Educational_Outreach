@@ -1,45 +1,53 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../Styles/Program.css";
 import ProgramCard from "./ProgramCard";
 import programDetails from "../List/programDetails";
 
-export default function Program(){
-    return(
-        <div id="Program" >
+export default function Program({ searchQuery, onMatchFound }) {
+    const Ref = useRef(null);
+
+    useEffect(() => {
+        if (searchQuery) {
+            if (Ref.current) {
+                const firstHighlighted = Ref.current.querySelector(".highlight");
+                if (firstHighlighted) {
+                    firstHighlighted.scrollIntoView({ behavior: "smooth", block: "center" });
+                    onMatchFound(true); 
+                } else {
+                    onMatchFound(false); 
+                }
+            }
+        } else {
+            onMatchFound(true); 
+        }
+    }, [searchQuery, onMatchFound]);
+
+    
+    const highlightText = (text) => {
+        if (!searchQuery) return <span>{text}</span>; 
+
+        const regex = new RegExp(`(${searchQuery})`, "gi");
+        const parts = text.split(regex);
+        return parts.map((part, index) =>
+            regex.test(part) ? (
+                <span key={index} className="highlight">{part}</span>
+            ) : (
+                <span key={index}>{part}</span>
+            )
+        );
+    };
+
+    return (
+        <div id="Program" ref={Ref}>
             <h1 className="heading">Our Programs</h1>
             <div className="programs">
-                <ProgramCard 
-                    img = {programDetails[0].imgURL}
-                    detail = {programDetails[0].content}
-                />
-                <ProgramCard 
-                    img = {programDetails[1].imgURL}
-                    detail = {programDetails[1].content}
-                />
-                <ProgramCard 
-                    img = {programDetails[2].imgURL}
-                    detail = {programDetails[2].content}
-                />
-                <ProgramCard 
-                    img = {programDetails[3].imgURL}
-                    detail = {programDetails[3].content}
-                />
-                <ProgramCard 
-                    img = {programDetails[4].imgURL}
-                    detail = {programDetails[4].content}
-                />
-                <ProgramCard 
-                    img = {programDetails[5].imgURL}
-                    detail = {programDetails[5].content}
-                />
-                <ProgramCard 
-                    img = {programDetails[6].imgURL}
-                    detail = {programDetails[6].content}
-                />
-                <ProgramCard 
-                    img = {programDetails[7].imgURL}
-                    detail = {programDetails[7].content}
-                />
+                {programDetails.map((program, index) => (
+                    <ProgramCard 
+                        key={index}
+                        img={program.imgURL}
+                        detail={highlightText(program.content)} 
+                    />
+                ))}
             </div>
         </div>
     );

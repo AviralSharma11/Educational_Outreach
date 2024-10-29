@@ -1,28 +1,37 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../Styles/ReachOut.css";
 
-function ReachOut({ searchQuery }) {
+export default function ReachOut({ searchQuery, onMatchFound }) {
     const footerRef = useRef(null);
 
     useEffect(() => {
-        if (searchQuery && footerRef.current) {
-            const sections = footerRef.current.querySelectorAll(".footer-content, .quick-links h3, .quick-links li");
-            for (const section of sections) {
-                if (section.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
-                    section.scrollIntoView({ behavior: "smooth", block: "center" });
-                    break; // Stop at the first match
+        if (searchQuery) {
+            if (footerRef.current) {
+                const firstHighlighted = footerRef.current.querySelector(".highlight");
+                if (firstHighlighted) {
+                    firstHighlighted.scrollIntoView({ behavior: "smooth", block: "center" });
+                    onMatchFound(true); 
+                } else {
+                    onMatchFound(false); 
                 }
             }
+        } else {
+            onMatchFound(true); 
         }
-    }, [searchQuery]);
+    }, [searchQuery, onMatchFound]);
 
     const highlightText = (text) => {
-        if (!searchQuery) return text;
+        if (!searchQuery) return <span>{text}</span>;
+
         const regex = new RegExp(`(${searchQuery})`, "gi");
         const parts = text.split(regex);
-        return parts.map((part, index) => (
-            regex.test(part) ? <span key={index} className="highlight">{part}</span> : part
-        ));
+        return parts.map((part, index) =>
+            regex.test(part) ? (
+                <span key={index} className="highlight">{part}</span>
+            ) : (
+                <span key={index}>{part}</span>
+            )
+        );
     };
 
     return (
@@ -67,5 +76,3 @@ function ReachOut({ searchQuery }) {
         </div>
     );
 }
-
-export default ReachOut;

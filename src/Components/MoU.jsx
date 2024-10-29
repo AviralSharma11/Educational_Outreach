@@ -1,43 +1,42 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../Styles/MoU.css";
 
-function MoU({ data, searchQuery }) {
+function MoU({ data, searchQuery, onMatchFound }) {
     const tableRef = useRef(null);
 
     useEffect(() => {
-        if (searchQuery && tableRef.current) {
-            const rows = tableRef.current.querySelectorAll("tbody tr");
-            let found = false;
-
-            for (const row of rows) {
-                const cells = row.querySelectorAll("td");
-                for (const cell of cells) {
-                    if (cell.textContent.toLowerCase().includes(searchQuery.toLowerCase())) {
-                        row.scrollIntoView({ behavior: "smooth", block: "center" });
-                        found = true;
-                        break; 
-                    }
+        if (searchQuery) {
+            if (tableRef.current) {
+                const firstHighlighted = tableRef.current.querySelector(".highlight");
+                if (firstHighlighted) {
+                    firstHighlighted.scrollIntoView({ behavior: "smooth", block: "center" });
+                    onMatchFound(true); 
+                } else {
+                    onMatchFound(false); 
                 }
-                if (found) break; 
             }
-
-            if (!found) {
-                console.log("No matches found for:", searchQuery);
-            }
+        } else {
+            onMatchFound(true); 
         }
-    }, [searchQuery]);
+    }, [searchQuery, onMatchFound]);
 
+    
     const highlightText = (text) => {
-        if (!searchQuery) return text;
+        if (!searchQuery) return <span>{text}</span>; 
+    
         const regex = new RegExp(`(${searchQuery})`, "gi");
         const parts = text.split(regex);
-        return parts.map((part, index) => (
-            regex.test(part) ? <span key={index} className="highlight">{part}</span> : part
-        ));
+        return parts.map((part, index) =>
+            regex.test(part) ? (
+                <span key={index} className="highlight">{part}</span>
+            ) : (
+                <span key={index}>{part}</span>
+            )
+        );
     };
 
     return (
-        <div id="MOU">
+        <div id="MOU" ref={tableRef}>
             <h1 className="heading">MoUs</h1>
             <div className="table-container">
                 <table className="mou-table" ref={tableRef}>
@@ -56,7 +55,7 @@ function MoU({ data, searchQuery }) {
                                 <td>{index + 1}</td>
                                 <td>{highlightText(item.nature)}</td>
                                 <td>{highlightText(item.title)}</td>
-                                <td>{highlightText(item.signedOn)}</td>
+                                <td>{highlightText(item.signed)}</td>
                                 <td>{highlightText(item.duration)}</td>
                             </tr>
                         ))}
