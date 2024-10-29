@@ -34,6 +34,13 @@ export default function ReachOut({ searchQuery, onMatchFound }) {
         );
     };
 
+    const links = {
+        "Academic": "https://academic.iiti.ac.in/",
+        "Research": "https://rnd.iiti.ac.in/",
+        "Departments": "https://iiti.ac.in/departments",
+        "Campus Facilities": "https://www.iiti.ac.in/page/campus-facilities"
+    };
+
     return (
         <div id="reach-out" ref={footerRef}>
             <div className="footer">
@@ -58,9 +65,14 @@ export default function ReachOut({ searchQuery, onMatchFound }) {
                     <div className="footer-section quick-links">
                         <h3>{highlightText("QUICK LINKS")}</h3>
                         <ul>
-                            {["Academic", "Research", "Departments", "Campus Facilities"].map((link, index) => (
-                                <li key={index}>{highlightText(link)}</li>
-                            ))}
+                        {["Academic", "Research", "Departments", "Campus Facilities"].map((link, index) => (
+                            <li key={index}>
+                                <a href={links[link]}>
+                                    {highlightText(link)}
+                                </a>
+                            </li>
+                        ))}
+
                         </ul>
                     </div>
                     <div className="footer-section social-media">
@@ -72,6 +84,7 @@ export default function ReachOut({ searchQuery, onMatchFound }) {
                         </div>
                     </div>
                 </div>
+                <span style={{paddingBottom: "15px"}}><em>© 2024 Educational Outreach, IIT Indore</em></span>
             </div>
         </div>
     );

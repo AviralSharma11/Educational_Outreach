@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Footer from './Footer';
 import Header from './Header';
 import Heroes from './Heroes';
 import ReachOut from './ReachOut';
@@ -44,7 +43,6 @@ function Home() {
             <MoU data={mou} searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <News$Events searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <ReachOut searchQuery={searchQuery} onMatchFound={handleMatchFound} />
-            <Footer />
         </div>
     );
 }

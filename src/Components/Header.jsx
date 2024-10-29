@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom"; 
 import "../Styles/Header.css";
 
 function Header({ setSearchQuery }) { 
   const [searchValue, setSearchValue] = useState("");
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
@@ -34,6 +37,17 @@ function Header({ setSearchQuery }) {
     };
   }, []);
 
+  // Function to handle Home click
+  const handleHomeClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/");
+    }
+    closeMenu();
+  };
+
   return (
     <div>
       {/* Header Top */}
@@ -53,8 +67,12 @@ function Header({ setSearchQuery }) {
 
           <div className={`icons ${isMenuOpen ? "open" : ""}`}>
             {/* Navbar buttons */}
-            <div className="nav-item sep"><a href="/" onClick={closeMenu}>Home</a></div>
+            <div className="nav-item sep">
+              <a href="/" onClick={handleHomeClick}>Home</a>
+            </div>
+
             <div className="nav-item sep"><a href="/iit-indore" onClick={closeMenu}>IIT Indore</a></div>
+
             <div className="nav-item sep">
               <a href="#reach-out" onClick={(e) => {
                 e.preventDefault(); 
@@ -64,6 +82,7 @@ function Header({ setSearchQuery }) {
                 Reach Us
               </a>
             </div>
+
             <form className="search-bar" onSubmit={handleSearchSubmit}>
               <input 
                 type="text" 
@@ -82,6 +101,7 @@ function Header({ setSearchQuery }) {
         <div className={`navMenu ${isMenuOpen ? "open" : ""}`}>
           <div className="nav-item sep dropdown">
             About
+            {/* DropDown Menu */}
             <div className="dropdown-content">
               <a href="#" className="sub" onClick={closeMenu}>Educational Outreach</a>
               <a href="#People" className="sub" onClick={(e) => {
@@ -92,9 +112,10 @@ function Header({ setSearchQuery }) {
                 Our People
               </a>
               <a href="/iit-indore" className="sub" onClick={closeMenu}>IIT Indore</a>
-              <a href="#" className="" style={{fontWeight: 500}} onClick={closeMenu}>Campus Life</a>
+              <a href="https://www.iiti.ac.in/page/campus-facilities" className="" style={{fontWeight: 500}} onClick={closeMenu}>Campus Life</a>
             </div>
           </div>
+          {/* programs */}
           <div className="nav-item sep">
             <a href="#Program" onClick={(e) => {
               e.preventDefault(); 
@@ -104,6 +125,7 @@ function Header({ setSearchQuery }) {
               Programs
             </a>
           </div>
+
           <div className="nav-item sep">
             <a href="#MOU" onClick={(e) => {
               e.preventDefault(); 
@@ -113,7 +135,9 @@ function Header({ setSearchQuery }) {
               Cooperation & Engagements
             </a>
           </div>
-          <div className="nav-item sep"><a href="" onClick={closeMenu}>Academics & Research</a></div>
+
+          <div className="nav-item sep"><a href="https://academic.iiti.ac.in/" onClick={closeMenu}>Academics & Research</a></div>
+
           <div className="nav-item">
             <a href="#News" onClick={(e) => {
               e.preventDefault(); 
@@ -123,28 +147,6 @@ function Header({ setSearchQuery }) {
               News & Events
             </a>
           </div>
-          <div className="hidden nav-item sep"><a href="/" onClick={closeMenu}>Home</a></div>
-            <div className="hidden nav-item sep"><a href="/iit-indore" onClick={closeMenu}>IIT Indore</a></div>
-            <div className="hidden nav-item sep">
-              <a href="#reach-out" onClick={(e) => {
-                e.preventDefault(); 
-                document.getElementById("reach-out").scrollIntoView({ behavior: "smooth" });
-                closeMenu();
-              }}>
-                Reach Us
-              </a>
-            </div>
-            <form className="hidden search-bar" onSubmit={handleSearchSubmit}>
-              <input 
-                type="text" 
-                placeholder="Search" 
-                value={searchValue} 
-                onChange={(e) => setSearchValue(e.target.value)} 
-              />
-              <button type="submit" onClick={closeMenu}>
-                <img src="/Images/SearchButton.png" alt="Search" />
-              </button>
-            </form>
         </div>
       </div>
     </div>
