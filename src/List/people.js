@@ -1,7 +1,7 @@
 const events = [
     {
         imgURL: "/Images/devendra_sir.jpg",
-        content: "Prof. Devendra Deshmukh",
+        content: "Prof. Devendra L. Deshmukh",
         position: "Dean, Education Outreach, IIT Indore",
     },{
         imgURL: "/Images/Rajeev.jpg",
