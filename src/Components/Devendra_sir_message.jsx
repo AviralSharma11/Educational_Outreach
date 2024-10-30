@@ -42,10 +42,10 @@ export default function Devandra_sir_message({ searchQuery, onMatchFound }) {
                 <div className="column-right">
                     <h3 className="font-weight-darker head">{highlightText("Communities are our priority!")}</h3>
                     <p className="text-muted">
-                        {highlightText("Suryansh Aximintia dolupta quatis essiminienit faciam dis utam rest fugitatis solor moditas mo blaborrum apicab illa simolorrunda vendigendus alit vendaerro ium quidendis doluptaerume dolore ium Otatibus andaecte nima nobit la eum dit aut voloraecti dipisin cuptatinum identiates et moluptat")}
+                        {highlightText("The vision of the Education Outreach Department is driven by a deep belief in the transformative power of education to shape lives, build communities, and create a prosperous world. At the core of our mission lies a commitment to excellence, equity, and empowerment in education. We believe that education is not merely a pathway to personal success but a powerful catalyst for positive change in our communities and beyond.")}
                     </p>
                     <p className="my-1 font-weight-darker text-body">
-                        {highlightText("Prof. Devendra Deshmukh")} <br /> IIT Indore
+                        {highlightText("Prof. Devendra L. Deshmukh")} <br /> IIT Indore
                     </p>
                 </div>
             </div>
