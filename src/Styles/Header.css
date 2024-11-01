@@ -22,8 +22,9 @@
   }
   
   .logo img {
-    height: 80px;
+    height: 90px;
     margin-right: 10px;
+    width: 45vw;
   }
   
   .logo span {
@@ -146,6 +147,7 @@
 
   .logo img {
       height: 60px;
+      width: 45vw;
   }
 
   .nav-item {
@@ -249,6 +251,7 @@
 @media (max-width: 480px) {
     .logo img {
         height: 50px;
+        width: 45vw;
     }
 
     .search-bar input {

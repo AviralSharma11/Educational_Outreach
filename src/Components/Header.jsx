@@ -147,6 +147,29 @@ function Header({ setSearchQuery }) {
               News & Events
             </a>
           </div>
+
+          <div className="hidden nav-item sep"><a href="/" onClick={closeMenu}>Home</a></div>
+            <div className="hidden nav-item sep"><a href="/iit-indore" onClick={closeMenu}>IIT Indore</a></div>
+            <div className="hidden nav-item sep">
+              <a href="#reach-out" onClick={(e) => {
+                e.preventDefault(); 
+                document.getElementById("reach-out").scrollIntoView({ behavior: "smooth" });
+                closeMenu();
+              }}>
+                Reach Us
+              </a>
+            </div>
+            <form className="hidden search-bar" onSubmit={handleSearchSubmit}>
+              <input 
+                type="text" 
+                placeholder="Search" 
+                value={searchValue} 
+                onChange={(e) => setSearchValue(e.target.value)} 
+              />
+              <button type="submit" onClick={closeMenu}>
+                <img src="/Images/SearchButton.png" alt="Search" />
+              </button>
+            </form>
         </div>
       </div>
     </div>
