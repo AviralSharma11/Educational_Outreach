@@ -104,11 +104,11 @@ function Header({ setSearchQuery }) {
             {/* DropDown Menu */}
             <div className="dropdown-content">
               <a href="#" className="sub" onClick={closeMenu}>Educational Outreach</a>
-              <a href="#People" className="sub" onClick={(e) => {
+              <a href="#People" className="sub" >onClick={(e) => {
                 e.preventDefault(); 
                 document.getElementById("People").scrollIntoView({ behavior: "smooth" });
                 closeMenu();
-              }}>
+              }}
                 Our People
               </a>
               <a href="/iit-indore" className="sub" onClick={closeMenu}>IIT Indore</a>

@@ -38,7 +38,7 @@ function Home() {
             )}
             <Director_message searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <Devendra_sir_message searchQuery={searchQuery} onMatchFound={handleMatchFound} />
-            <OurPeople searchQuery={searchQuery} onMatchFound={handleMatchFound} />
+            {/* <OurPeople searchQuery={searchQuery} onMatchFound={handleMatchFound} /> */}
             <Program searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <MoU data={mou} searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <News$Events searchQuery={searchQuery} onMatchFound={handleMatchFound} />
