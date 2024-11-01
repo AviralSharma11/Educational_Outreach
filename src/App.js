@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import Home from './Components/Home';
 import IITI_page from "./Components/IITI_page";
 import Engagements_and_Cooperations from "./Components/Engagments_and_cooperations";
-import OurPeople from "./Components/OurPeople";
+import OurPeople_page from "./Components/OurPeople_page";
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
 
           <Route path="/iit-indore" element={<IITI_page/>} /> 
 
-          <Route path="/our_people" element={<OurPeople/>} />
+          <Route path="/our_people" element={<OurPeople_page/>} />
         </Routes>
       </Router>    
     </div>

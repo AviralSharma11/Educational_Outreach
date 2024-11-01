@@ -47,9 +47,12 @@ export default function OurPeople({ searchQuery, onMatchFound }) {
                         img={person.imgURL}
                         detail={highlightText(person.content)}
                         position={highlightText(person.position)}
+                        contact={highlightText(person.contact_no)}
+                        email={person.email_id ? highlightText(person.email_id) : null}
+                        address={highlightText(person.address)}
                     />
                 ))}
             </div>
-        </div>
+        </div>  
     );
 }

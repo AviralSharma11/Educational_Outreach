@@ -96,7 +96,11 @@ function Header({ setSearchQuery }) {
             </form>
           </div>
         </div>
-
+        {/* onClick={(e) => {
+                e.preventDefault(); 
+                document.getElementById("People").scrollIntoView({ behavior: "smooth" });
+                closeMenu();
+              }} */}
         {/* Navigation Menu */}
         <div className={`navMenu ${isMenuOpen ? "open" : ""}`}>
           <div className="nav-item sep dropdown">
@@ -104,11 +108,7 @@ function Header({ setSearchQuery }) {
             {/* DropDown Menu */}
             <div className="dropdown-content">
               <a href="#" className="sub" onClick={closeMenu}>Educational Outreach</a>
-              <a href="#People" className="sub" >onClick={(e) => {
-                e.preventDefault(); 
-                document.getElementById("People").scrollIntoView({ behavior: "smooth" });
-                closeMenu();
-              }}
+              <a href="/our_people" className="sub" >
                 Our People
               </a>
               <a href="/iit-indore" className="sub" onClick={closeMenu}>IIT Indore</a>
