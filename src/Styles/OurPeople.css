@@ -65,7 +65,7 @@
 
 .people-card-image {
     width: 100%;
-    height: 200px; 
+    height: 223px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,7 +110,7 @@
     font-weight: 600;
     font-size: 25px;
     margin-bottom: 8px;
-    color: #333;
+    color: #333; 
 }
 
 .people-card-image {
