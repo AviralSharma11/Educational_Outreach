@@ -22,53 +22,12 @@
     text-align: center;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
     background-color: #f8f8f8; 
-    perspective: 1000px;
 }
-.program-card-outer {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d; /* Enables 3D flipping */
-}
-
-.program-card:hover .program-card-outer {
-    transform: rotateY(180deg); /* Flip the card on hover */
-}
-
-.program-card-front,
-.program-card-back {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    backface-visibility: hidden; /* Hide the back when not flipped */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.program-card-front {
-    background-color: #ffffff;
-}
-
-
-.program-card-back {
-    background-color: #f8f8f8;
-    transform: rotateY(180deg); /* Set back face orientation */
-    border: 1px solid #d3d3d3;
-    padding: 10px;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1); 
-}
-
 .program-card:hover{
     cursor: pointer;
     box-shadow: 0px 12px 30px 0px rgb(38, 37, 37);
     transform: scale(1.1,1.1);
     transition: all 400ms;
-
 }
 .program-card-image {
     width: 100%;
@@ -92,8 +51,6 @@
     color: #333;
     font-weight: 500;
     line-height: 1.2;
-    padding: 10px;
-    text-align: center;
 }
 
 /* Responsive Design */
