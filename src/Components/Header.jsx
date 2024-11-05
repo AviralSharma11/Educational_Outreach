@@ -157,7 +157,7 @@ const toggleModal = () => {
             About
             {/* DropDown Menu */}
             <div className="dropdown-content">
-              <a href="#" className="sub" onClick={toggleModal}>Educational Outreach</a>
+              <a className="sub" onClick={toggleModal}>Educational Outreach</a>
               <a href="/our_people" className="sub" >
                 Our People
               </a>
