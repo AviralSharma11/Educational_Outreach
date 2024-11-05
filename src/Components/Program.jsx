@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "../Styles/Program.css";
 import ProgramCard from "./ProgramCard";
 import programDetails from "../List/programDetails";

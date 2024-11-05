@@ -34,7 +34,7 @@ function IITI({ searchQuery, onMatchFound }) {
     };
     return (
         <div ref={contentRef}>
-                <img src="/Images/IITI_intro.jpg" className="intro" alt="" />
+                <img src="/Images/IITI_intro.jpg" className="intro" alt="intro" />
             <div className="content">
                 <h1>{highlightText("IIT Indore")}</h1>
                 <p>{highlightText("Indian Institute of Technology Indore (IIT Indore or IITI) is one of the premier engineering and technology institutes in India. Established in 2009, it is one of the eight new Indian Institutes of Technology (IITs) established by the Ministry of Education, Government of India.")}</p>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef} from "react";
 import '../Styles/Message.css';
 
 export default function Director_message({ searchQuery, onMatchFound }) {

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef} from "react";
 import "../Styles/News$Events.css";
 import EventCards from "./EventCards";
 import events from "../List/events";

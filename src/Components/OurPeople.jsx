@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "../Styles/OurPeople.css";
 import people from "../List/people";
 import PeopleCard from "./PeopleCard";

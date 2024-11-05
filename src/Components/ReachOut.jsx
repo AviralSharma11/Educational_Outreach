@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import "../Styles/ReachOut.css";
 
 export default function ReachOut({ searchQuery, onMatchFound }) {

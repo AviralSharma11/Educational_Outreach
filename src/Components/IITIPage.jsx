@@ -6,7 +6,7 @@ import "../Styles/IITI.css";
 
 
 
-function IITI_page() {
+function IITIPage() {
     const [searchQuery, setSearchQuery] = useState(""); 
     const [noMatch, setNoMatch] = useState(false);
 
@@ -36,4 +36,4 @@ function IITI_page() {
     );
 }
 
-export default IITI_page;
+export default IITIPage;
