@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import '../Styles/Message.css';
 
-export default function Devandra_sir_message({ searchQuery, onMatchFound }) {
+export default function DevandraSirMessage({ searchQuery, onMatchFound }) {
     const Ref = useRef(null);
 
     useEffect(() => {

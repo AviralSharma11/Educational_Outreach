@@ -1,7 +1,7 @@
 import React, { useEffect, useRef} from "react";
 import '../Styles/Message.css';
 
-export default function Director_message({ searchQuery, onMatchFound }) {
+export default function DirectorMessage({ searchQuery, onMatchFound }) {
     const Ref = useRef(null);
 
 

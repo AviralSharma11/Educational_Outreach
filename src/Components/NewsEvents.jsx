@@ -3,7 +3,7 @@ import "../Styles/News$Events.css";
 import EventCards from "./EventCards";
 import events from "../List/events";
 
-export default function News$Events({ searchQuery, onMatchFound }) {
+export default function NewsEvents({ searchQuery, onMatchFound }) {
     const Ref = useRef(null);
 
     useEffect(() => {

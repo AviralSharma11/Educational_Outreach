@@ -3,9 +3,9 @@ import Header from './Header';
 import Heroes from './Heroes';
 import ReachOut from './ReachOut';
 import Program from "./Program";
-import Devendra_sir_message from './Devendra_sir_message';
-import Director_message from './Director_message';
-import News$Events from "./News&Events";
+import DevendraSirMessage from './DevendraSirMessage';
+import DirectorMessage from './DirectorMessage';
+import NewsEvents from "./NewsEvents";
 import MoU from "./MoU";
 import mou from "../List/mou";
 import "../Styles/Highlight.css";
@@ -35,12 +35,12 @@ function Home() {
                     <button onClick={() => setNoMatch(false)}>Close</button>
                 </div>
             )}
-            <Director_message searchQuery={searchQuery} onMatchFound={handleMatchFound} />
-            <Devendra_sir_message searchQuery={searchQuery} onMatchFound={handleMatchFound} />
+            <DirectorMessage searchQuery={searchQuery} onMatchFound={handleMatchFound} />
+            <DevendraSirMessage searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             {/* <OurPeople searchQuery={searchQuery} onMatchFound={handleMatchFound} /> */}
             <Program searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <MoU data={mou} searchQuery={searchQuery} onMatchFound={handleMatchFound} />
-            <News$Events searchQuery={searchQuery} onMatchFound={handleMatchFound} />
+            <NewsEvents searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <ReachOut searchQuery={searchQuery} onMatchFound={handleMatchFound} />
         </div>
     );
