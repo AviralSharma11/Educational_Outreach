@@ -52,3 +52,18 @@
 .mou-table tbody tr:hover td {
     background-color: #c1e9f6; 
 }
+
+@media (max-width: 768px) {
+    #MOU {
+        margin: 20px 10px;
+    }
+
+    .mou-table {
+        font-size: 14px;
+    }
+
+    .mou-table th,
+    .mou-table td {
+        padding: 6px;
+    }
+}

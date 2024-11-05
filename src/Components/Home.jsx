@@ -26,7 +26,7 @@ function Home() {
     }, [searchQuery]);
 
     return (
-        <div>
+        <div >
             <Header setSearchQuery={setSearchQuery} />
             <Heroes searchQuery={searchQuery} />
             {noMatch && searchQuery && (
