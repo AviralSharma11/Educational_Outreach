@@ -40,7 +40,7 @@ export default function DevandraSirMessage({ searchQuery, onMatchFound }) {
                     <img className="img-fluid" src="/Images/devendra_sir.jpg" alt="Prof. Devendra Deshmukh" />
                 </div>
                 <div className="column-right">
-                    <h3 className="font-weight-darker head">{highlightText("Communities are our priority!")}</h3>
+                    {/* <h3 className="font-weight-darker head">{highlightText("Communities are our priority!")}</h3> */}
                     <p className="text-muted">
                         {highlightText("The vision of the Education Outreach Department is driven by a deep belief in the transformative power of education to shape lives, build communities, and create a prosperous world. At the core of our mission lies a commitment to excellence, equity, and empowerment in education. We believe that education is not merely a pathway to personal success but a powerful catalyst for positive change in our communities and beyond.")}
                     </p>

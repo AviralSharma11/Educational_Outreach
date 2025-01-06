@@ -42,7 +42,7 @@ export default function DirectorMessage({ searchQuery, onMatchFound }) {
                     <img className="img-fluid" src="/Images/Prof_Suhas_Joshi.png" alt="Prof. Suhas S. Joshi" />
                 </div>
                 <div className="column-right">
-                    <h3 className="font-weight-darker head">{highlightText("Communities are our priority!")}</h3>
+                    {/* <h3 className="font-weight-darker head">{highlightText("Communities are our priority!")}</h3> */}
                     <p className="text-muted">
                         {highlightText("Aximintia dolupta quatis essiminienit faciam dis utam rest fugitatis solor moditas mo blaborrum apicab illa simolorrunda vendigendus alit vendaerro ium quidendis doluptaerume dolore ium Otatibus andaecte nima nobit la eum dit aut voloraecti dipisin cuptatinum identiates et moluptat")}
                     </p>

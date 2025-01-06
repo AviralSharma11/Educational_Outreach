@@ -6,6 +6,7 @@ import Program from "./Program";
 import DevendraSirMessage from './DevendraSirMessage';
 import DirectorMessage from './DirectorMessage';
 import NewsEvents from "./NewsEvents";
+import Announcements from './Announcements';
 import MoU from "./MoU";
 import mou from "../List/mou";
 import "../Styles/Highlight.css";
@@ -39,7 +40,8 @@ function Home() {
             <DevendraSirMessage searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <Program searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <MoU data={mou} searchQuery={searchQuery} onMatchFound={handleMatchFound} />
-            <NewsEvents searchQuery={searchQuery} onMatchFound={handleMatchFound} />
+            {/* <NewsEvents searchQuery={searchQuery} onMatchFound={handleMatchFound} /> */}
+            <Announcements/>
             <ReachOut searchQuery={searchQuery} onMatchFound={handleMatchFound} />
         </div>
     );

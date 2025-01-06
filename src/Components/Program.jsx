@@ -44,8 +44,9 @@ export default function Program({ searchQuery, onMatchFound }) {
                 {programDetails.map((program, index) => (
                     <ProgramCard 
                         key={index}
-                        img={program.imgURL}
-                        detail={highlightText(program.content)} 
+                        // img={program.imgURL}
+                        detail={highlightText(program.title)} 
+                        content = {highlightText(program.description)}
                     />
                 ))}
             </div>
