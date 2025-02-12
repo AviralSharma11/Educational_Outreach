@@ -5,7 +5,6 @@ import ReachOut from './ReachOut';
 import Program from "./Program";
 import DevendraSirMessage from './DevendraSirMessage';
 import DirectorMessage from './DirectorMessage';
-import NewsEvents from "./NewsEvents";
 import Announcements from './Announcements';
 import MoU from "./MoU";
 import mou from "../List/mou";
