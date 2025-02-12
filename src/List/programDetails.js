@@ -30,16 +30,7 @@ const programDetails = [
         description: "IIT Indore has started Part-time Doctor of Philosophy (Ph.D.) Program for permanent faculties from All the Government (Autonomous) Engineering Colleges including University Institute of Technology – RajeevGandhi Proudyuogiki Vishwavidyalaya, Bhopal.",
         title: "MoU with Department of Technical Education Skill Development and Employment (Part-time Ph.D)",
     },
-    {
-        // imgURL: "/Images/iiti.jpg",
-        description: "It is a course that promotes synthesis and imparting interdisciplinary hand-on knowledge and experience to all students as per the mandate of NEP 2020.",
-        title: "Makers Space",
-    },
-    {
-        imgURL: "/Images/iiti.jpg",
-        description: "A student-managed facility open 24×7 available for all.",
-        title: "Tinkers Lab",
-    },
+
 ];
 
 export default programDetails;

@@ -4,7 +4,6 @@ import Heroes from './Heroes';
 import ReachOut from './ReachOut';
 import Program from "./Program";
 import DevendraSirMessage from './DevendraSirMessage';
-import DirectorMessage from './DirectorMessage';
 import Announcements from './Announcements';
 import MoU from "./MoU";
 import mou from "../List/mou";
@@ -35,7 +34,7 @@ function Home() {
                     <button onClick={() => setNoMatch(false)}>Close</button>
                 </div>
             )}
-            <DirectorMessage searchQuery={searchQuery} onMatchFound={handleMatchFound} />
+            {/* <DirectorMessage searchQuery={searchQuery} onMatchFound={handleMatchFound} /> */}
             <DevendraSirMessage searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <Program searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <MoU data={mou} searchQuery={searchQuery} onMatchFound={handleMatchFound} />

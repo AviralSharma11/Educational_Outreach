@@ -45,7 +45,7 @@ export default function DevandraSirMessage({ searchQuery, onMatchFound }) {
                         {highlightText("The vision of the Education Outreach Department is driven by a deep belief in the transformative power of education to shape lives, build communities, and create a prosperous world. At the core of our mission lies a commitment to excellence, equity, and empowerment in education. We believe that education is not merely a pathway to personal success but a powerful catalyst for positive change in our communities and beyond.")}
                     </p>
                     <p className="my-1 font-weight-darker text-body">
-                        {highlightText("Prof. Devendra L. Deshmukh")} <br /> IIT Indore
+                        {highlightText("Prof. Devendra L. Deshmukh")} <br /> Dean of Educational Outreach
                     </p>
                 </div>
             </div>

@@ -1,10 +1,27 @@
+#Header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  max-width: 100%;
+  z-index: 900;
+  box-sizing: border-box; /* Ensures padding and border don't add extra width */
+  overflow-x: hidden; /* Prevents horizontal overflow */
+}
 
-.Navbar{
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 900;
+/* Prevent Child Elements From Causing Overflow */
+.header, .navMenu {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure No Unwanted Padding/Margin */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Ensure nothing scrolls horizontally */
 }
 
 /* General header layout */
@@ -141,6 +158,51 @@
     border-bottom: 0.5px dotted #555;
   }
 
+  /* Hamburger Icon Styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  padding: 10px;
+  background: none;
+  border: none;
+  z-index: 900;
+}
+
+.hamburger-bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+
+/* about educational outreach */
+
+.abouteo {
+  position: fixed; 
+  z-index: 1500;
+  margin: 60px;
+  border: 1px solid black;
+  background-color: #fff; /* Or another background color to stand out */
+  padding: 20px; /* Optional: add some padding */
+  border-radius: 8px; /* Optional: give rounded corners */
+}
+
+/* Show overlay and .abouteo together */
+
+.close{
+  color: white;
+  background-color: red;
+  position: absolute; 
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 0.5px solid rgba(255, 0, 0, 0.295);
+}
   
 
   /* Responsive Design */
@@ -169,23 +231,7 @@
   }
 }
 
-/* Hamburger Icon Styling */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    padding: 10px;
-    background: none;
-    border: none;
-    z-index: 900;
-}
 
-.hamburger-bar {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 4px 0;
-}
 
 /* Show Hamburger Icon */
 @media (max-width: 768px) {
@@ -267,29 +313,3 @@
     }
 }
 
-/* about educational outreach */
-
-.abouteo {
-  position: fixed; 
-  z-index: 1500;
-  margin: 60px;
-  border: 1px solid black;
-  background-color: #fff; /* Or another background color to stand out */
-  padding: 20px; /* Optional: add some padding */
-  border-radius: 8px; /* Optional: give rounded corners */
-}
-
-/* Show overlay and .abouteo together */
-
-.close{
-  color: white;
-  background-color: red;
-  position: absolute; 
-  top: 10px;
-  right: 10px;
-  padding: 5px 10px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-  border: 0.5px solid rgba(255, 0, 0, 0.295);
-}

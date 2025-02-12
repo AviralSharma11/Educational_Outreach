@@ -103,9 +103,9 @@ const toggleModal = () => {
 };
 
   return (
-    <div >
+    <div id="Header">
       {/* Header Top */}
-      <div className="Navbar">
+    
         <div className="header">
           {/* Logo */}
           <div className="logo">
@@ -125,7 +125,7 @@ const toggleModal = () => {
               <a href="/" onClick={handleHomeClick}>Home</a>
             </div>
 
-            <div className="nav-item sep"><a href="/iit-indore" onClick={closeMenu}>IIT Indore</a></div>
+            <div className="nav-item sep"><a href="https://www.iiti.ac.in/" onClick={closeMenu}>IIT Indore</a></div>
 
             <div className="nav-item sep">
               <a href="#reach-out" onClick={(e) => {
@@ -161,7 +161,7 @@ const toggleModal = () => {
               <a href="/our_people" className="sub" >
                 Our People
               </a>
-              <a href="/iit-indore" className="sub" onClick={closeMenu}>IIT Indore</a>
+              <a href="https://www.iiti.ac.in/" className="sub" onClick={closeMenu}>IIT Indore</a>
               <a href="https://www.iiti.ac.in/page/campus-facilities" className="" style={{fontWeight: 500}} onClick={closeMenu}>Campus Life</a>
             </div>
           </div>
@@ -208,7 +208,6 @@ const toggleModal = () => {
                 <img src="/Images/SearchButton.png" alt="Search" />
               </button>
             </form>
-        </div>
       </div>
       {isModalOpen && (
         <div className="abouteo">

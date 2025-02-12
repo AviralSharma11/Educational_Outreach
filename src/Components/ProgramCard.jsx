@@ -4,7 +4,7 @@ import "../Styles/Program.css";
 export default function ProgramCard({ detail, content}) {
     return (
         <div className="program-card">
-            <div className="program-card-outer">
+            <div className="program-card-outers">
                 {/* Front Side */}
                 <div className="program-card-front">
                     {/* <div className="program-card-image">
