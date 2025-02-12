@@ -85,7 +85,7 @@ const handleCooperationEngagementClick = (e) => {
 const handleNewsActivitiesClick = (e) => {
   e.preventDefault();
   if (location.pathname === "/") {
-      document.getElementById("News").scrollIntoView({ behavior: "smooth" });
+      document.getElementById("Announcements").scrollIntoView({ behavior: "smooth" });
   } else {
       navigate("/");
       setTimeout(() => {
@@ -103,7 +103,7 @@ const toggleModal = () => {
 };
 
   return (
-    <div>
+    <div >
       {/* Header Top */}
       <div className="Navbar">
         <div className="header">
@@ -182,7 +182,7 @@ const toggleModal = () => {
 
           <div className="nav-item">
             <a href="#News" onClick={handleNewsActivitiesClick}>
-              News & Events
+              Announcements
             </a>
           </div>
 

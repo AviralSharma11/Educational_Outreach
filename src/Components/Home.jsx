@@ -41,7 +41,7 @@ function Home() {
             <Program searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <MoU data={mou} searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             {/* <NewsEvents searchQuery={searchQuery} onMatchFound={handleMatchFound} /> */}
-            <Announcements/>
+            <Announcements searchQuery={searchQuery} onMatchFound={handleMatchFound} />
             <ReachOut searchQuery={searchQuery} onMatchFound={handleMatchFound} />
         </div>
     );

@@ -1,4 +1,6 @@
 .highlight {
     background-color: yellow; 
-    font-weight: bold; 
+    font-weight: bold;
+    margin-right: 3px;
+    margin-left: 3px; 
 }
