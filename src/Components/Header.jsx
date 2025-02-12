@@ -105,7 +105,7 @@ const toggleModal = () => {
   return (
     <div id="Header">
       {/* Header Top */}
-    
+      <div className="Navbar">
         <div className="header">
           {/* Logo */}
           <div className="logo">
@@ -208,6 +208,7 @@ const toggleModal = () => {
                 <img src="/Images/SearchButton.png" alt="Search" />
               </button>
             </form>
+        </div>
       </div>
       {isModalOpen && (
         <div className="abouteo">
