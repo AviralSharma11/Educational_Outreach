@@ -23,7 +23,7 @@ const mou = [
     {
         sno: "4",
         nature:"MoU",
-        title:"VECV (Executive MTech program i n Electric Vehicle Technology by IITI and VECV employees",
+        title:"VECV (Executive MTech program in Electric Vehicle Technology by IITI and VECV employees",
         signed:"31/07/2023",
         duration:"5 Years",
     },
