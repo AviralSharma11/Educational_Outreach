@@ -1,4 +1,4 @@
-const events = [
+const people = [
     {
         imgURL: "/Images/devendra_sir.jpg",
         content: "Prof. Devendra L. Deshmukh",
@@ -38,4 +38,4 @@ const events = [
     }
 ];
 
-export default events;
+export default people;
