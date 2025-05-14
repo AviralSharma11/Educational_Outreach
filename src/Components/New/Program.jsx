@@ -56,7 +56,7 @@ const Program = () => {
     };
 
     return (
-        <div className="latest-events">
+        <div id="programs" className="latest-events">
             <h2 className="events-heading">Latest Programs</h2>
             <Slider {...settings} className="events-carousel">
                 {events.map((event, index) => (

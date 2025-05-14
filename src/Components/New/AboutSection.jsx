@@ -3,7 +3,7 @@ import '../../Styles/New/AboutSection.css';
 
 const AboutSection = () => {
     return (
-        <div className="about-section">
+        <div id="about" className="about-section">
             <div className="about-container">
                 <div className="about-image">
                     <img src="/Images/iiti.jpg" alt="IIT Indore Building" />

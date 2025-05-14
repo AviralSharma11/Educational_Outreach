@@ -77,3 +77,47 @@
     margin-bottom: 10px;
 }
 
+/* ---------- Responsive Styling ---------- */
+@media (max-width: 992px) {
+    .dean-message-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .dean-message-left,
+    .dean-message-center,
+    .dean-message-right {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dean-message-left h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .dean-message-right h4 {
+        font-size: 1.3rem;
+    }
+
+    .dean-message-center {
+        margin: 20px 0;
+    }
+
+    .dean-message-center img {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width: 576px) {
+    .dean-message-left h2 {
+        font-size: 1.4rem;
+    }
+
+    .dean-message-right p,
+    .dean-message-left p {
+        font-size: 0.95rem;
+    }
+}

@@ -1,25 +1,25 @@
 import React from "react";
-import "../../Styles/New/Team.css";
-import people from "../../List/people";
+import "../../Styles/OurPeople.css";
 
-const Team = () => {
+export default function Team({ img, detail, position, contact, email, address }) {
     return (
-      <div className="team-section">
-        <h2 className="team-heading">Our Team</h2>
-        <div className="team-grid">
-          {people.map((member, index) => (
-            <div className="team-card" key={index}>
-              <img src={member.imgURL} alt={member.name} className="team-image" />
-              <div className="team-overlay">
-                <h3>{member.name}</h3>
-                <p className="team-position">{member.position}</p>
-                <p className="team-email">{member.email}</p>
-              </div>
+        <div className="people-card-wrapper">
+            <div className="people-card-heading">{position}</div> {/* Position heading outside the card box */}
+            <div className="people-card">
+                <div className="people-card-outer">
+                    <div className="people-card-image">
+                        <img src={img} alt="Person" />
+                        
+                    </div>
+                    <div className="Info people-card-deatil-text" style={{ fontWeight: "600" }}>{detail} </div>
+                    <div className="people-card-detail">
+                        <div className="Info" style={{ fontWeight: "600" }}>{detail} </div>
+                        <div className="Info" style={{ fontSize: "10px" }}>Contact No: {contact}</div>
+                        <div className="Info" style={{ fontSize: "10px" }}>{email}</div>
+                        <div className="Info" style={{ fontSize: "10px" }}>{address}</div>
+                    </div>
+                </div>
             </div>
-          ))}
         </div>
-      </div>
     );
-  };
-  
-  export default Team;
+}

@@ -3,17 +3,32 @@ import '../../Styles/New/ParallaxHeader.css';
 
 const ParallaxHeader = () => {
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [isMenuOpen, setMenuOpen] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
             const header = document.querySelector('.parallax-header');
-            header.style.backgroundPositionY = `${window.scrollY * 0.5}px`;
+            if (header) {
+                header.style.backgroundPositionY = `${window.scrollY * 0.5}px`;
+            }
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const toggleMenu = () => {
+        setMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
+    const toggleDropdown = (e) => {
+        e.stopPropagation();
+        setIsDropdownVisible(!isDropdownVisible);
+    };
 
     return (
         <header className="parallax-header">
@@ -22,33 +37,29 @@ const ParallaxHeader = () => {
                 <span className="header-title">Educational Outreach</span>
             </div>
 
-            <div 
-                className={`hamburger ${isMobileMenuOpen ? 'open' : ''}`} 
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
+            <button className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 <span></span>
                 <span></span>
                 <span></span>
-            </div>
+            </button>
 
-            <nav className={`navbar ${isMobileMenuOpen ? 'open' : ''}`}>
+            <nav className={`navbar ${isMenuOpen ? 'open' : ''}`}>
                 <ul>
-                    <li
-                        className="home-menu"
-                        onClick={() => setIsDropdownVisible(!isDropdownVisible)}
-                    >
-                        <span>Home</span>
-                        <ul className={`dropdown ${isDropdownVisible ? 'show' : ''}`}>
-                            <li><a href="#about">Educational Outreach</a></li>
-                            <li><a href="#our-people">Our People</a></li>
-                            <li><a href="https://www.iiti.ac.in/">IIT Indore</a></li>
-                            <li><a href="https://www.iiti.ac.in/page/campus-facilities">Campus Life</a></li>
-                        </ul>
+                    <li className="home-menu" onClick={toggleDropdown}>
+                        <span className='homer'>Home</span>
+                        {isDropdownVisible && (
+                            <div className="dropdown-content">
+                                <a href="#about" onClick={closeMenu}>Educational Outreach</a>
+                                <a href="#our-people" onClick={closeMenu}>Our People</a>
+                                <a href="https://www.iiti.ac.in/" target="_blank" rel="noreferrer" onClick={closeMenu}>IIT Indore</a>
+                                <a href="https://www.iiti.ac.in/page/campus-facilities" target="_blank" rel="noreferrer" onClick={closeMenu}>Campus Life</a>
+                            </div>
+                        )}
                     </li>
-                    <li><a href="#programs">Programs</a></li>
-                    <li><a href="#MOU">Cooperation & Engagements</a></li>
-                    <li><a href="https://academic.iiti.ac.in/">Academic & Research</a></li>
-                    <li><a href="#news">Announcements</a></li>
+                    <li><a href="#programs" onClick={closeMenu}>Programs</a></li>
+                    <li><a href="#MOU" onClick={closeMenu}>Cooperation & Engagements</a></li>
+                    <li><a href="https://academic.iiti.ac.in/" target="_blank" rel="noreferrer" onClick={closeMenu}>Academic & Research</a></li>
+                    <li><a href="#news" onClick={closeMenu}>Announcements</a></li>
                 </ul>
             </nav>
         </header>

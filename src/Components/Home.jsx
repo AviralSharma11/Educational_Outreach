@@ -7,8 +7,8 @@ import Program from './New/Program';
 import MoU from './MoU';
 import mou from '../List/mou';
 import Announcements from './Announcements';
-import Team from './New/Team';
 import ReachOut from './ReachOut';
+import TeamMain from './New/TeamMain';
 
 function Home() {
 
@@ -21,7 +21,7 @@ function Home() {
             <Program />
             <MoU data={mou}/>
             <Announcements />
-            <Team />
+            <TeamMain/>
             <ReachOut />
         </div>
     );
