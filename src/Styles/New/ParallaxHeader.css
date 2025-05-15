@@ -7,9 +7,10 @@ body, html {
 
 /* Parallax Header */
 .parallax-header {
-    position: relative;
+    position: fixed;
     background-color: rgb(87, 87, 87);
     height: 150px;
+    width: 100%;
     color: white;
     display: flex;
     justify-content: space-between;

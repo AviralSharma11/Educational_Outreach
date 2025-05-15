@@ -1,30 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import '../../Styles/New/ParallaxHeader.css';
 
 const ParallaxHeader = () => {
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
     const [isMenuOpen, setMenuOpen] = useState(false);
-    const [isHeaderVisible, setHeaderVisible] = useState(true);
-    let lastScrollY = window.pageYOffset;
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.pageYOffset;
-
-            if (currentScrollY > lastScrollY) {
-                // Scrolling Down
-                setHeaderVisible(false);
-            } else {
-                // Scrolling Up
-                setHeaderVisible(true);
-            }
-            lastScrollY = currentScrollY;
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
 
     const toggleMenu = () => {
         setMenuOpen(!isMenuOpen);
@@ -38,13 +17,18 @@ const ParallaxHeader = () => {
         e.stopPropagation();
         setIsDropdownVisible(!isDropdownVisible);
     };
-
+    
     return (
-        <header className={`parallax-header ${isHeaderVisible ? 'visible' : 'hidden'}`}>
-            <div className="logo-section">
-                <img src="/Images/IITI_Logo.png" alt="IIT Indore Logo" className="logo-image" />
-                <span className="header-title">Educational Outreach</span>
-            </div>
+        <header className="parallax-header">
+            <div 
+    className="logo-section" 
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    style={{ cursor: 'pointer' }}
+>
+    <img src="/Images/IITI_Logo.png" alt="IIT Indore Logo" className="logo-image" />
+    <span className="header-title">Educational Outreach</span>
+</div>
+
 
             <button className={`hamburger ${isMenuOpen ? 'open' : ''}`} onClick={toggleMenu}>
                 <span></span>
