@@ -9,6 +9,7 @@ import mou from '../List/mou';
 import Announcements from './Announcements';
 import ReachOut from './ReachOut';
 import TeamMain from './New/TeamMain';
+import FacebookPageEmbed from './New/FacebookPageEmbedded';
 
 function Home() {
 
@@ -22,6 +23,7 @@ function Home() {
             <MoU data={mou}/>
             <Announcements />
             <TeamMain/>
+            <FacebookPageEmbed />
             <ReachOut />
         </div>
     );

@@ -37,7 +37,9 @@
     font-size: 2.5rem;
     margin-bottom: 15px;
     font-weight: bold;
-    color: #333;
+    color: #27c9ff;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 0.4px 0.4px 0.4px #0099cc;
 }
 
 .about-content h3 {
@@ -73,7 +75,7 @@
     }
 
     .about-content h2 {
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .about-content h3 {
