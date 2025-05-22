@@ -42,6 +42,8 @@ const FacebookPageEmbed = () => {
 
   {/* Embed YouTube Video Below */}
   <div className="youtube-video">
+    <h2 className='facebook-title bc'>Institute Campus Video</h2>
+    <div className="facebook-title-underline"></div>
     <iframe
       width="100%"
       height="315"
