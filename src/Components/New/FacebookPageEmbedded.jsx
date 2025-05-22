@@ -23,6 +23,7 @@ const FacebookPageEmbed = () => {
             fjs.parentNode.insertBefore(js, fjs);
         })(document, 'script', 'facebook-jssdk');
     }, []);
+    
 
     return (
 <div className="facebook-container">

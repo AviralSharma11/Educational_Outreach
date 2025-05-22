@@ -77,7 +77,7 @@
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #93e4ff;
+    background-color:  rgb(138, 138, 138);
     top: 100%;
     left: 0;
     min-width: 160px;
