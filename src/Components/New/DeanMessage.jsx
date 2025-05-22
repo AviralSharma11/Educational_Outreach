@@ -18,7 +18,7 @@ const DeanMessage = () => {
                     <Quote size={30} color="#1e3a8a" />
                     <h4>IIT Indore</h4>
                     <p>
-                        The vision of the Education Outreach Department is driven by a deep belief in the transformative power of education to shape lives, build communities, and create a prosperous world. At the core of our mission lies a commitment to excellence, equity, and empowerment in education. We believe that education is not merely a pathway to personal success but a powerful catalyst for positive change in our communities and beyond.
+                        The vision of the Educational Outreach Department is driven by a deep belief in the transformative power of education to shape lives, build communities, and create a prosperous world. At the core of our mission lies a commitment to excellence, equity, and empowerment in education. We believe that education is not merely a pathway to personal success but a powerful catalyst for positive change in our communities and beyond.
                     </p>
                 </div>
             </div>
