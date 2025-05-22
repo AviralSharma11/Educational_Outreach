@@ -7,7 +7,8 @@ export default function ReachOut() {
         "Academic": "https://academic.iiti.ac.in/",
         "Research": "https://rnd.iiti.ac.in/",
         "Departments": "https://iiti.ac.in/departments",
-        "Campus Facilities": "https://www.iiti.ac.in/page/campus-facilities"
+        "Campus Facilities": "https://www.iiti.ac.in/page/campus-facilities",
+        "MSDSM" : "https://msdsm.iiti.ac.in/"
     };
 
     return (
@@ -27,6 +28,7 @@ export default function ReachOut() {
                                 {"Khandwa Road, Simrol, Indore 453552"}<br />
                                 {"Madhya Pradesh, India"}<br />
                                 {"Tel No: +91 07316605179"}<br />
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{" +91 07316605593"}</span><br />
                                 {"Email: eooffice@iiti.ac.in"}
                             </p>
                         </div>
@@ -34,7 +36,7 @@ export default function ReachOut() {
                     <div className="footer-section quick-links">
                         <h3>{"QUICK LINKS"}</h3>
                         <ul>
-                        {["Academic", "Research", "Departments", "Campus Facilities"].map((link, index) => (
+                        {["Academic", "Research", "Departments", "Campus Facilities" , "MSDSM"].map((link, index) => (
                             <li key={index}>
                                 <a href={links[link]}>
                                     {link}

@@ -1,6 +1,5 @@
 import React from 'react';
 import ParallaxHeader from './New/ParallaxHeader';
-import Video from './New/Video';
 import AboutSection from './New/AboutSection';
 import DeanMessage from './New/DeanMessage';
 import Program from './New/Program';
@@ -16,7 +15,6 @@ function Home() {
     return (
         <div >
             <ParallaxHeader/>
-            <Video />
             <AboutSection />
             <DeanMessage />
             <Program />

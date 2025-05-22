@@ -25,21 +25,35 @@ const FacebookPageEmbed = () => {
     }, []);
 
     return (
-        <div className="facebook-container">
-            <h2 className="facebook-title">Facebook</h2>
-            <div className="facebook-title-underline"></div>
-            <div
-                className="fb-page"
-                data-href="https://www.facebook.com/p/IIT-Indore-100064798209779/"
-                data-tabs="timeline"
-                data-width="500"
-                data-height="700"
-                data-small-header="false"
-                data-adapt-container-width="true"
-                data-hide-cover="false"
-                data-show-facepile="true"
-            ></div>
-        </div>
+<div className="facebook-container">
+  <h2 className="facebook-title">Facebook</h2>
+  <div className="facebook-title-underline"></div>
+  <div
+    className="fb-page"
+    data-href="https://www.facebook.com/p/IIT-Indore-100064798209779/"
+    data-tabs="timeline"
+    data-width="500"
+    data-height="700"
+    data-small-header="false"
+    data-adapt-container-width="true"
+    data-hide-cover="false"
+    data-show-facepile="true"
+  ></div>
+
+  {/* Embed YouTube Video Below */}
+  <div className="youtube-video">
+    <iframe
+      width="100%"
+      height="315"
+      src="https://www.youtube.com/embed/pmaKaMiRHd4"
+      title="YouTube video player"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowFullScreen
+    ></iframe>
+  </div>
+</div>
+
     );
 };
 

@@ -19,11 +19,12 @@
 .events-carousel {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 10px; /* vertical spacing between rows, useful if multiple carousels */
 }
+
 .events-carousel .react-multi-carousel-item {
-    width: 80px;
-    margin: 0 10px; /* Adds horizontal padding (gap) between slides */
+    padding: 0 10px; /* proper horizontal spacing */
+    box-sizing: border-box;
 }
 
 .event-card {
@@ -31,13 +32,15 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    padding: 20px;
+    padding: 20px 0px; /* corrected padding syntax */
     height: 20vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    
 }
+
+
+
 
 
 /* .event-card:hover {
@@ -61,6 +64,12 @@
   /*  -webkit-line-clamp: 3; /* number of lines to show */
     /* -webkit-box-orient: vertical; */
 }
+
+.events-carousel .react-multi-carousel-item {
+    padding: 0 10px; /* Adds 20px total gap between items */
+    box-sizing: border-box;
+}
+
 
 @media (max-width: 786px){
     .event-card{

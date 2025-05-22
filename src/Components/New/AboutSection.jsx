@@ -6,7 +6,8 @@ const AboutSection = () => {
         <div id="about" className="about-section">
             <div className="about-container">
                 <div className="about-image">
-                    <img src="/Images/iiti.jpg" alt="IIT Indore Building" />
+                    <img  className="desktop" src="/Images/Abhinandan_cropped.jpg" alt="IIT Indore Building" />
+                    <img className='mobile' src='/Images/institute.jpg' alt="Mobile View" />
                 </div>
                 <div className="about-content">
                     <h2>ABOUT</h2>
@@ -18,7 +19,7 @@ const AboutSection = () => {
                         teachers, parents, and the general public, to promote learning, skill development, and awareness
                     </p>
                     <p>
-                        <strong>Our Vision:</strong> Leverage the academic expertise of IIT Indore to develop
+                        <strong className='vision'>Our Vision:</strong><br/>Leverage the academic expertise of IIT Indore to develop
                             collaboration with external institutes, industry and society for capacity building, research and skill development
                             <br/>
                             Develop and deliver academic programs for industry professionals :
