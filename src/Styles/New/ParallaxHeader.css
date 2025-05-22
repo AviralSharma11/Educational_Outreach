@@ -145,7 +145,7 @@
 @media (max-width: 901px) {
     .hamburger {
         display: flex;
-        margin-right: 35px;
+        margin-right: 60px;
     }
 
     .navbar {

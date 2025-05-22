@@ -51,7 +51,8 @@ const ParallaxHeader = () => {
                     </li>
                     <li><a href="#programs" onClick={closeMenu}>Programs</a></li>
                     <li><a href="#MOU" onClick={closeMenu}>Cooperation & Engagements</a></li>
-                    <li><a href="https://academic.iiti.ac.in/" target="_blank" rel="noreferrer" onClick={closeMenu}>Academic & Research</a></li>
+                    <li><a href="https://academic.iiti.ac.in/" target="_blank" rel="noreferrer" onClick={closeMenu}>Academic</a></li>
+                    <li><a href='https://rnd.iiti.ac.in/' onClick={closeMenu}>Research</a></li>
                     <li><a href="#news" onClick={closeMenu}>Announcements</a></li>
                 </ul>
             </nav>
