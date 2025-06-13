@@ -11,28 +11,28 @@ const people = [
         content: "Mr. Rajeev Pandey",
         position: "Assistant Registrar, IIT Indore",
         contact_no: "0731-6603481",
-        email_id: "",
+        email_id: "dreo@iiti.ac.in",
         address: "8th floor, West Wing, Abhinandan Bhawan",
     },{
         imgURL: "/Images/Prtishtha.jpg",
         content: "Mrs. Pratistha Sharma",
         position: "Junior Superintendent, IIT Indore",
         contact_no: "0731-6605593",
-        email_id: "",
+        email_id: "pratistha@iiti.ac.in",
         address: "8th floor, West Wing, Abhinandan Bhawan",
     },{
         imgURL: "/Images/Aditya.jpg",
         content: "Mr. Aditya Singh Sikarwar",
         position: "Junior Assistant, IIT Indore",
         contact_no: "0731-6605179",
-        email_id: "",
+        email_id: "aditya@iiti.ac.in",
         address: "8th floor, West Wing, Abhinandan Bhawan",
     },{
         imgURL: "/Images/Nitin.jpg",
         content: "Mr. Nitin Srivastava",
         position: "Junior Attendant, IIT Indore",
         contact_no: "0731-6605180",
-        email_id: "",
+        email_id: "nitins@iiti.ac.in",
         address: "8th floor, West Wing, Abhinandan Bhawan",
         
     }

@@ -15,7 +15,11 @@ export default function Team({ img, detail, position, contact, email, address })
                     <div className="people-card-detail">
                         <div className="Info" style={{ fontWeight: "600" }}>{detail} </div>
                         <div className="Info" style={{ fontSize: "10px" }}>Contact No: {contact}</div>
-                        <div className="Info" style={{ fontSize: "10px" }}>{email}</div>
+                        <div className="Info" style={{ fontSize: "10px" }}>
+                            <a href={`mailto:${email}`}>
+                                {email}
+                            </a>
+                        </div>
                         <div className="Info" style={{ fontSize: "10px" }}>{address}</div>
                     </div>
                 </div>

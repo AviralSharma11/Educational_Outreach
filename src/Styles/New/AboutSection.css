@@ -74,6 +74,10 @@
         flex-direction: column;
     }
 
+    .about-image img{
+        object-fit: contain;
+    }
+
     .about-image,
     .about-content {
         width: 100%;
@@ -119,6 +123,8 @@
     }
 
     .about-image {
+        min-height: 0px;
+        max-height: 200px;
         height: 200px;
     }
 }
